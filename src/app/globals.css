@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+    /* Dark mode (default) */
     --color-primary: #1e40af;
     /* Deep blue from logo */
     --color-secondary: #facc15;
@@ -11,7 +12,19 @@
     /* Light foreground for text */
 }
 
+html.light {
+    --color-primary: #2563eb;
+    /* Brighter blue for light mode */
+    --color-secondary: #f59e0b;
+    /* Amber accent for light mode */
+    --color-background: #f9fafb;
+    /* Light background */
+    --color-foreground: #0b0b10;
+    /* Dark text for light mode */
+}
+
 body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
