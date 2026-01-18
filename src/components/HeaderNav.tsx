@@ -80,14 +80,14 @@ const HeaderNav = () => {
 
             {/* Mobile nav dropdown */}
             {open && (
-                <nav className="mt-3 border-t-4 pt-3 md:hidden"
+                <nav className="mt-3 border-b-4 pt-3 md:hidden h-screen"
                     style={{ borderColor: "var(--color-secondary)" }}>
                     <ul className="flex flex-col gap-2">
                         {navLinks.map((link) => (
                             <li key={link.href}>
                                 <a
                                     href={link.href}
-                                    className="block w-full border-4 px-3 py-2 text-xs font-bold uppercase tracking-wide"
+                                    className="block w-full border-b-4 px-3 py-4 text-xs font-bold uppercase tracking-wide"
                                     style={{
                                         borderColor: "var(--color-secondary)",
                                         backgroundColor: "var(--color-background)",
