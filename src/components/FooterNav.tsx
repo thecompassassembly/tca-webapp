@@ -19,8 +19,7 @@ const FooterNav = () => {
                             Compass Assembly
                         </h3>
                         <p className="max-w-xs leading-relaxed">
-                            Finding direction in faith through community, worship, and
-                            service.
+                            The Compass Assembly, is a warm and exciting Christian community, where everyone is valued and cherished.
                         </p>
                     </div>
 
@@ -130,9 +129,7 @@ const FooterNav = () => {
                         </h4>
                         <div className="space-y-2">
                             <p>
-                                123 Faith Street
-                                <br />
-                                City, State 12345
+                                Market Junction, Port Harcourt Aba Express Way
                             </p>
                             <p>(555) 123-4567</p>
                             <p>info@compassassembly.org</p>

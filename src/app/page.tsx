@@ -1,5 +1,8 @@
+'use client'
+
 import HeaderNav from '@/components/HeaderNav';
 import FooterNav from '@/components/FooterNav';
+import Marquee from 'react-fast-marquee';
 
 export default function Home() {
   return (
@@ -11,7 +14,24 @@ export default function Home() {
       }}
     >
       <HeaderNav />
-      <main className="py-16 px-8">
+      <main className="">
+
+        
+        {/* Marquee Section */}
+        <div className="mb-16 border-y-8" style={{ borderColor: "var(--color-secondary)" }}>
+          <Marquee speed={50} gradient={false} className="py-4">
+            <div className="flex gap-12 text-4xl md:text-5xl font-black uppercase tracking-widest cursor-pointer" style={{ color: "var(--color-secondary)" }}>
+              <span className="transition-colors duration-300 hover:text-[var(--color-primary)]">Word</span>
+              <span className="transition-colors duration-300 hover:text-[var(--color-primary)]">•</span>
+              <span className="transition-colors duration-300 hover:text-[var(--color-primary)]">Worship</span>
+              <span className="transition-colors duration-300 hover:text-[var(--color-primary)]">•</span>
+              <span className="transition-colors duration-300 hover:text-[var(--color-primary)]">Prayer</span>
+              <span className="transition-colors duration-300 hover:text-[var(--color-primary)]">•</span>
+              <span className="transition-colors duration-300 hover:text-[var(--color-primary)]">Discipleship</span>
+              <span className="transition-colors duration-300 hover:text-[var(--color-primary)]">•</span>
+            </div>
+          </Marquee>
+        </div>
 
       </main>
       <FooterNav />
