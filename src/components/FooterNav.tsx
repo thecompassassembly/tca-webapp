@@ -33,7 +33,7 @@ const FooterNav = () => {
       className=""
     >
       <footer className="lg:grid lg:grid-cols-5 border border-[var(--color-border)]">
-        <div className="relative block h-32 lg:col-span-2 lg:h-full">
+        <div className="relative block h-48 lg:col-span-2 lg:h-full">
           <img
             src="https://i.pinimg.com/736x/14/ed/d3/14edd3aa11ec52bb51e181fd7ef466e2.jpg"
             alt=""
