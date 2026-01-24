@@ -170,7 +170,7 @@ const FooterNav = () => {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <p className="font-medium text-[var(--color-foreground)]">
-                  Pages
+                  Core Pages
                 </p>
                 <ul className="mt-6 space-y-4 text-sm">
 
@@ -187,7 +187,7 @@ const FooterNav = () => {
                 </ul>
               </div>
               <div>
-                <p className="font-medium text-[var(--color-foreground)]">
+                <p className="font-medium text-[var(--color-foreground)] mt-10 lg:mt-0">
                   Quick links
                 </p>
                 <ul className="mt-6 space-y-4 text-sm">

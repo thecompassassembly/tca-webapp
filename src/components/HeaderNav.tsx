@@ -28,9 +28,9 @@ const HeaderNav = () => {
 
   return (
     <header
-      className="mx-auto flex h-20 items-center p-2 md:px-4 lg:px-8 py-8"
+      className="mx-auto flex h-20 items-center p-2 md:px-4 lg:px-8 py-8 sticky top-0 z-50 backdrop-blur-md border-b border-[var(--color-border)] transition-colors duration-300"
       style={{
-        backgroundColor: "var(--color-background)",
+        backgroundColor: "color-mix(in srgb, var(--color-background) 80%, transparent)",
         color: "var(--color-foreground)",
       }}
     >
