@@ -17,7 +17,7 @@ const quicklinks = [
   { href: "/", label: "Testimonies" },
   { href: "/", label: "Prayer Request" },
   { href: "/", label: "Join Workforce" },
-  { href: "/", label: "Join Workforce" },
+  { href: "/", label: "First Timers" },
   
 ]
 
