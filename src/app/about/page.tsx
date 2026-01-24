@@ -3,7 +3,7 @@ import FooterNav from '@/components/FooterNav';
 
 export default function About() {
     return (
-        <div className="min-h-screen font-mono"
+        <div className="min-h-screen "
             style={{
                 backgroundColor: "var(--color-background)",
                 color: "var(--color-foreground)",
