@@ -41,7 +41,7 @@ const HeaderNav = () => {
         <div className="relative flex w-full items-center justify-center rounded-md bg-black text-sm text-white antialiased lg:ml-10">
           
           <div className="relative z-0 text-sm text-emerald-500">
-            <Image src="/image.png" height={50} width={50} alt="Logo" className="h-10 w-auto" />
+            <Image src="/image.png" height={50} width={50} alt="Logo" className="h-6 lg:h-8 w-auto" />
          
           </div>
         </div>
