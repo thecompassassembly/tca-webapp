@@ -1,17 +1,355 @@
-import HeaderNav from '@/components/HeaderNav';
-import FooterNav from '@/components/FooterNav';
+
+"use client";
+import HeaderNav from "@/components/HeaderNav";
+import FooterNav from "@/components/FooterNav";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { HeartHandshake, Globe, BookOpen, Sparkles, Users, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { heroSlides, identitySlides } from "@/models/heroSlides";
+
+
+/* --SLIDER COMPONENT-- */
+function IdentitySlider() {
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setIndex((prev) => (prev + 1) % identitySlides.length);
+        }, 3000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const slide = identitySlides[index];
+
+    return (
+        <div className="relative h-[380px] rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl">
+            {/* IMAGE SLIDE */}
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={slide.title}
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.9, ease: "easeOut" }}
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${slide.image})` }}
+                />
+            </AnimatePresence>
+
+            {/* OVERLAY */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-10" />
+
+            {/* TEXT CONTENT */}
+            <div className="relative z-20 h-full p-10 flex flex-col justify-end">
+                <Users className="w-12 h-12 text-indigo-400 mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-2">{slide.title}</h3>
+                <p className="text-lg text-white/85 leading-relaxed">{slide.text}</p>
+            </div>
+
+            {/* INDICATORS */}
+            <div className="absolute bottom-6 right-6 z-20 flex gap-2">
+                {identitySlides.map((_, i) => (
+                    <span
+                        key={i}
+                        className={`h-2 w-2 rounded-full transition ${i === index ? "bg-indigo-400" : "bg-white/30"
+                            }`}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+}
 
 export default function About() {
+    const { scrollYProgress } = useScroll();
+    const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
+    const [current, setCurrent] = useState(0);
+
+    const fadeUp = {
+        hidden: { opacity: 0, y: 40 },
+        visible: { opacity: 1, y: 0 },
+    };
+
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % heroSlides.length);
+        }, 3000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const slide = heroSlides[current];
+
+
     return (
-        <div className="min-h-screen "
-            style={{
-                backgroundColor: "var(--color-background)",
-                color: "var(--color-foreground)",
-                borderColor: "var(--color-secondary)",
-            }}
-        >
+        <div className="min-h-screen" style={{ backgroundColor: "var(--color-background)", color: "var(--color-foreground)" }}>
             <HeaderNav />
-            <main className="py-16 px-8">
+
+            <main className="bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-white overflow-hidden">
+
+
+                <section className="relative h-[90vh] overflow-hidden">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={slide.id}
+                            initial={{ opacity: 0, scale: 1.05 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.98 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            className="absolute inset-0 flex items-center justify-center"
+                        >
+                            {/* BACKGROUND slide */}
+                            {slide.image ? (
+                                <>
+                                    <div
+                                        className="absolute inset-0 bg-cover bg-center"
+                                        style={{ backgroundImage: `url(${slide.image})` }}
+                                    />
+                                    <div className="absolute inset-0 bg-black/65" />
+                                </>
+                            ) : (
+                                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.25),transparent_60%)]" />
+                            )}
+
+                            {/* CONTENT slide*/}
+                            {slide.image ? (
+                                <motion.div
+                                    variants={fadeUp}
+                                    initial="hidden"
+                                    animate="visible"
+                                    transition={{ duration: 1 }}
+
+                                    className={`absolute bottom-16 left-16 z-10 max-w-xl text-left ${slide.bgColor ? slide.bgColor : ""}`}  
+                                >
+                                    <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-white leading-tight">
+                                        {slide.title}
+                                    </h1>
+
+                                    {slide.subtitle && (
+                                        <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+                                            {slide.subtitle}
+                                        </p>
+                                    )}
+                                </motion.div>
+                            ) : (
+
+                                <motion.div
+                                    variants={fadeUp}
+                                    initial="hidden"
+                                    animate="visible"
+                                    transition={{ duration: 1 }}
+                                    className="relative z-10 text-center max-w-4xl px-8"
+                                >
+                                    <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-white">
+                                        {slide.title}
+                                    </h1>
+
+                                    {slide.subtitle && (
+                                        <p className="text-xl md:text-2xl text-white/80">
+                                            {slide.subtitle}
+                                        </p>
+                                    )}
+
+                                    <div className="mt-12">
+                                        <button className="inline-flex items-center gap-3 bg-indigo-600 hover:bg-indigo-500 text-white px-12 py-5 rounded-full text-lg font-semibold transition">
+                                            Plan a Visit <ArrowRight />
+                                        </button>
+                                    </div>
+                                </motion.div>
+                            )}
+
+                        </motion.div>
+                    </AnimatePresence>
+
+                    {/* DOTS */}
+                    <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+                        {heroSlides.map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => setCurrent(i)}
+                                className={`w-3 h-3 rounded-full transition ${i === current ? "bg-white" : "bg-white/40"
+                                    }`}
+                            />
+                        ))}
+                    </div>
+                </section>
+
+
+                {/* WHO WE ARE */}
+                <section className="max-w-7xl mx-auto px-8 py-32 grid md:grid-cols-2 gap-24 items-center">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeUp}
+                        transition={{ duration: 0.8 }}
+                        className="space-y-8"
+                    >
+                        <h2 className="text-4xl md:text-5xl font-bold">Who We Are</h2>
+                        <p className="text-lg text-white/70 leading-relaxed">
+                            The Compass Assembly is a Christ‑centered, family‑oriented church in
+                            Port Harcourt, Nigeria, committed to giving clarity, stability, and
+                            direction through God’s wisdom.
+                        </p>
+                        <p className="text-lg text-white/70 leading-relaxed">
+                            Led by Pastors Wisdom and Favour Osiri, we raise believers who are
+                            grounded in Scripture, strong in character, and effective in
+                            leadership, business, and relationships.
+                        </p>
+                    </motion.div>
+
+                    {/* mini slide */}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeUp}
+                        transition={{ duration: 0.9, delay: 0.2 }}
+                    >
+                        <IdentitySlider />
+                    </motion.div>
+                </section>
+
+                {/* VISION & MISSION */}
+                <section className="py-24 relative overflow-hidden">
+
+                    <div className="absolute -top-20 -left-20 w-96 h-96 bg-indigo-700/20 rounded-full blur-3xl animate-pulse-slow"></div>
+                    <div className="absolute -bottom-32 -right-24 w-[28rem] h-[28rem] bg-purple-700/20 rounded-full blur-3xl animate-pulse-slow"></div>
+
+                    <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16">
+                        {[
+                            {
+                                icon: Globe,
+                                title: "Our Vision",
+                                text: "To guide people into clarity, purpose, and fulfillment through the wisdom of God."
+                            },
+                            {
+                                icon: HeartHandshake,
+                                title: "Our Mission",
+                                text: "To raise empowered believers who influence society through wisdom, faith, and excellence."
+                            }
+                        ].map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.9, delay: i * 0.2 }}
+                                className="relative rounded-3xl p-12 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-500"
+                            >
+                                <motion.div
+                                    className="w-16 h-16 mb-6 text-indigo-400"
+                                    initial={{ rotate: -10 }}
+                                    animate={{ rotate: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.3 }}
+                                >
+                                    <item.icon className="w-16 h-16 text-indigo-400" />
+                                </motion.div>
+
+                                <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 mb-4">
+                                    {item.title}
+                                </h3>
+
+                                <p className="text-white/80 text-lg leading-relaxed">{item.text}</p>
+
+
+                                <div className="absolute -top-6 -right-6 w-16 h-16 bg-indigo-700/20 rounded-full blur-2xl animate-pulse-slow" />
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+
+
+                {/* BELIEFS */}
+                <section className="relative py-32 overflow-hidden">
+           
+                    <div className="absolute inset-0 bg-gradient-to-b from-indigo-950/20 via-black/0 to-indigo-950/10 -z-10" />
+                    <div className="absolute -top-40 left-1/4 w-[28rem] h-[28rem] bg-yellow-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+                    <div className="absolute -bottom-32 right-1/4 w-[32rem] h-[32rem] bg-indigo-700/10 rounded-full blur-3xl animate-pulse-slow"></div>
+
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeUp}
+                        className="text-center max-w-3xl mx-auto mb-24"
+                    >
+                        <h2 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-white to-indigo-400 drop-shadow-lg">
+                            What We Believe
+                        </h2>
+                        <p className="text-lg text-white/70 font-light">
+                            Our faith is firmly rooted in Scripture and empowered by the Holy Spirit.
+                            We live to reflect His glory.
+                        </p>
+                    </motion.div>
+
+                    <div className="relative max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-12">
+                        {[
+                            { icon: BookOpen, text: "The Bible is God’s final authority." },
+                            { icon: Users, text: "Salvation is complete through Jesus Christ." },
+                            { icon: Sparkles, text: "The Holy Spirit is active and powerful today." },
+                            { icon: HeartHandshake, text: "Grace empowers righteousness and victory." }
+                        ].map((belief, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.9, delay: i * 0.2, type: "spring", stiffness: 70 }}
+                                className="relative group rounded-3xl p-10 bg-white/5 border border-white/20 backdrop-blur-xl hover:scale-105 hover:bg-white/10 hover:shadow-2xl transition-transform duration-500"
+                            >
+                                <motion.div
+                                    className="w-12 h-12 mb-6 text-indigo-400"
+                                    animate={{ y: [0, -6, 0], rotate: [0, 5, 0] }}
+                                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                                >
+                                    <belief.icon className="w-12 h-12 text-purple-400" />
+                                </motion.div>
+                                <p className="text-white/80 font-medium text-lg leading-relaxed">{belief.text}</p>
+
+                                <div className="absolute -top-5 -left-5 w-5 h-5 bg-yellow-400/20 rounded-full blur-xl animate-pulse-slow" />
+                                <div className="absolute -bottom-5 -right-5 w-5 h-5 bg-yellow-400/20 rounded-full blur-xl animate-pulse-slow" />
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+
+
+                {/* CTA */}
+
+
+                <section className="relative h-[80vh] flex items-center justify-center overflow-hidden px-8">
+               
+                    <div className="absolute inset-0 bg-gradient-to-b from-indigo-700/20 via-black/0 to-indigo-950/60 -z-10" />
+                    <img src="/images/stained-glass.png" className="absolute inset-0 w-full h-full object-cover opacity-20 -z-10" />
+
+                    <div className="absolute -top-20 left-1/4 w-96 h-96 bg-indigo-900/20 rounded-full blur-3xl animate-slow-spin"></div>
+                    <div className="absolute -bottom-32 right-1/4 w-[28rem] h-[28rem] bg-purple-400/10 rounded-full blur-3xl animate-slow-spin-reverse"></div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 60 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        className="relative max-w-4xl text-center space-y-8"
+                    >
+                        <h2 className="text-6xl md:text-7xl font-serif font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-white to-indigo-200 drop-shadow-lg tracking-wide leading-tight">
+                            Find Your Direction
+                        </h2>
+
+                        <p className="text-xl md:text-2xl text-white/70 font-light max-w-2xl mx-auto">
+                            This is more than a church. It’s a sanctuary of clarity, growth, and destiny alignment — where faith meets purpose.
+                        </p>
+
+                        <button className="relative inline-flex items-center gap-4 px-16 py-5 rounded-full text-lg font-semibold bg-gradient-to-r from-yellow-400 to-gold-300 text-indigo-950 shadow-xl hover:scale-105 hover:shadow-2xl transition-transform duration-500">
+                            Plan a Visit
+                            <ArrowRight className="ml-2 w-6 h-6" />
+                        </button>
+
+                        <div className="w-32 h-0.5 bg-purple-400/50 mx-auto mt-6 rounded-full" />
+                    </motion.div>
+                </section>
+
 
             </main>
             <FooterNav />
