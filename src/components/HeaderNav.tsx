@@ -137,12 +137,12 @@ const HeaderNav = () => {
         </a>    
         </div> */}
         <span className="mx-3 hidden lg:flex text-nuetral-200 dark:text-neutral-700">|</span>
-        <a
+        {/* <a
           className="hover:text-foreground/80 text-foreground/60 mr-3 text-sm font-medium transition-colors hidden lg:flex "
           href="/login"
         >
           Contact
-        </a>
+        </a> */}
 
 
         <a
