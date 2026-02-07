@@ -19,7 +19,7 @@ export default function Home() {
         {/* Hero Section with Video Background and Fallback Slideshow */}
         <section className="relative w-full h-[90vh] min-h-[400px] flex items-center justify-center overflow-hidden">
           {/* Video Background */}
-          {/* <video
+          <video
             autoPlay
             muted
             loop
@@ -27,7 +27,7 @@ export default function Home() {
             className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
           >
             <source src="/images/the-compass-video.mp4" type="video/mp4" />
-          </video> */}
+          </video>
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           {/* Content */}
@@ -38,6 +38,19 @@ export default function Home() {
             <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto" style={{ color: "var(--color-foreground)" }}>
               A warm and exciting Christian community where everyone is valued and cherished. Join us as we grow together in faith, hope, and love.
             </p>
+            <div className='flex gap-4'>
+              <a href="/live" aria-label="Watch Live" className="inline-flex items-center gap-3 rounded-full px-6 py-3 bg-white text-[var(--color-primary)] font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]">
+                Watch Live
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4" aria-hidden>
+                  <path d="M5 3v18l15-9-15-9z" fill="currentColor" />
+                </svg>
+              </a>
+
+              <a href="/give" aria-label="Give to The Compass Assembly" className="inline-flex items-center gap-3 rounded-full px-6 py-3 bg-[var(--color-accent)] text-black font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]">
+                Give for Pinnacle
+              </a>
+            </div>
+
           </div>
         </section>
 
