@@ -1,3 +1,8 @@
+/* Smooth scrolling across the site */
+html {
+  scroll-behavior: smooth;
+}
+
 @import "tailwindcss";
 
 :root {

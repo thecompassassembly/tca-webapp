@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -35,31 +36,30 @@ export default function Home() {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           {/* Content */}
-          <div className="relative z-20 flex flex-col items-center justify-center max-w-3xl mx-auto w-full h-full text-center px-4">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }} className="relative z-20 flex flex-col items-center justify-center max-w-3xl mx-auto w-full h-full text-center px-4">
             <h1 className="text-4xl md:text-6xl font-black uppercase tracking-widest mb-6" style={{ color: "var(--color-secondary)" }}>
               Welcome to The Compass Assembly
             </h1>
             <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto" style={{ color: "var(--color-foreground)" }}>
               A warm and exciting Christian community where everyone is valued and cherished. Join us as we grow together in faith, hope, and love.
             </p>
-            <div className='flex justify-center w-full flex-col md:flex-row gap-4'>
-              <a href="/live" aria-label="Watch Live" className="inline-flex w-full md:w-auto md:flex-1 md:max-w-[240px] justify-center items-center gap-3 rounded-full px-6 py-3 bg-white text-[var(--color-primary)] font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]">
+            <motion.div className='flex justify-center w-full flex-col md:flex-row gap-4' initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5 }}>
+              <motion.a href="/live" aria-label="Watch Live" className="inline-flex w-full md:w-auto md:flex-1 md:max-w-[240px] justify-center items-center gap-3 rounded-full px-6 py-3 bg-white text-[var(--color-primary)] font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]" initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }}>
                 Watch Live
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4" aria-hidden>
                   <path d="M5 3v18l15-9-15-9z" fill="currentColor" />
                 </svg>
-              </a>
+              </motion.a>
 
-              <a href="/give" aria-label="Give to The Compass Assembly" className="inline-flex w-full md:w-auto md:flex-1 md:max-w-[240px] justify-center items-center gap-3 rounded-full px-6 py-3 bg-[var(--color-accent)] text-black font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]">
+              <motion.a href="/give" aria-label="Give to The Compass Assembly" className="inline-flex w-full md:w-auto md:flex-1 md:max-w-[240px] justify-center items-center gap-3 rounded-full px-6 py-3 bg-[var(--color-accent)] text-black font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]" initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.08 }}>
                 Give for Pinnacle
-              </a>
-            </div>
-
-          </div>
+              </motion.a>
+            </motion.div>
+          </motion.div>
         </section>
 
         {/* action links  */}
-        <section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: "var(--color-background)" }}>
+        <motion.section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: "var(--color-background)" }} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}>
           <div className="max-w-7xl mx-auto">
             <div className="text-left mb-12">
               <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: "var(--color-primary)" }}>
@@ -128,10 +128,10 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Our Expressions Section */}
-        <section className="w-full py-20 lg:px-0 px-6 md:px-12" style={{ backgroundColor: "var(--color-background)" }}>
+        <motion.section className="w-full py-20 lg:px-0 px-6 md:px-12" style={{ backgroundColor: "var(--color-background)" }} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: "var(--color-primary)" }}>
@@ -216,10 +216,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sermons Section */}
-        <section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: 'var(--color-background)' }}>
+        <motion.section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: 'var(--color-background)' }} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}>
           <div className="max-w-7xl mx-auto">
             <div className="text-left mb-12">
               <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: 'var(--color-primary)' }}>
@@ -289,13 +289,16 @@ export default function Home() {
               </Swiper>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Give - full screen hero (static background + illustration) */}
-        <section
+        <motion.section
           className="relative w-full min-h-screen flex items-center"
           aria-label="Give to The Compass Assembly"
           style={{ backgroundColor: 'var(--color-primary)' }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.15 }}
         >
           <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.12)' }} />
 
@@ -355,10 +358,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Meet Our Lead Pastor (side-by-side) */}
-        <section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: 'var(--color-background)' }}>
+        <motion.section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: 'var(--color-background)' }} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}>
           <div className="max-w-7xl mx-auto">
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -395,7 +398,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* our services / cruise */}
         <section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: "var(--color-background)" }}>
