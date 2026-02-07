@@ -64,3 +64,10 @@ body {
 button {
   cursor: pointer;
 }
+
+.country {
+  color: black;
+}
+.react-tel-input .form-control {
+  color: #2c2a2a;
+}

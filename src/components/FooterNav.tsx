@@ -1,28 +1,25 @@
 import React from "react";
 
 const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About TCA" },
-    { href: "/services", label: "Services" },
-    { href: "/pastors", label: "Pastors" },
-    { href: "/sermons", label: "Sermons" },
-    { href: "/events", label: "Events" },
-    { href: "/give", label: "Give" },
-    { href: "/contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About TCA" },
+  { href: "/services", label: "Services" },
+  { href: "/pastors", label: "Pastors" },
+  { href: "/sermons", label: "Sermons" },
+  { href: "/events", label: "Events" },
+  { href: "/give", label: "Give" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const quicklinks = [
-  { href: "/", label: "Pastors" },
+  { href: "/pastors", label: "Pastors" },
   { href: "/", label: "Communities" },
-  { href: "/", label: "Testimonies" },
+  { href: "/testimonies", label: "Testimonies" },
   { href: "/", label: "Prayer Request" },
   { href: "/", label: "Join Workforce" },
   { href: "/", label: "First Timers" },
   { href: "/", label: "View all pages" },
-  
-]
-
-
+];
 
 const FooterNav = () => {
   return (
@@ -174,16 +171,15 @@ const FooterNav = () => {
                   Core Pages
                 </p>
                 <ul className="mt-6 space-y-4 text-sm">
-
                   {navLinks.map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href={link.href}
-                      className="text-[var(--color-muted)] transition hover:opacity-75"
-                    >
-                      {link.label}
-                    </a>
-                 </li>
+                    <li key={index}>
+                      <a
+                        href={link.href}
+                        className="text-[var(--color-muted)] transition hover:opacity-75"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -192,18 +188,15 @@ const FooterNav = () => {
                   Quick links
                 </p>
                 <ul className="mt-6 space-y-4 text-sm">
-
                   {quicklinks.map((link, index) => (
-
-                  <li key={index}>
-                    <a
-                      href={link.href}
-                      className="text-[var(--color-muted)] transition hover:opacity-75"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                 
+                    <li key={index}>
+                      <a
+                        href={link.href}
+                        className="text-[var(--color-muted)] transition hover:opacity-75"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -239,7 +232,7 @@ const FooterNav = () => {
               </ul>
               <p className="mt-8 text-xs text-[var(--color-muted)] sm:mt-0">
                 &copy; {new Date().getFullYear()} Compass Assembly. All rights
-            reserved.
+                reserved.
               </p>
             </div>
           </div>
