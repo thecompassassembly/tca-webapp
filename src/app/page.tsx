@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
 import HeaderNav from '@/components/HeaderNav';
 import FooterNav from '@/components/FooterNav';
-import { Users, Eye, Target } from 'lucide-react';
+import { Users, Eye, Target, GiftIcon } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -319,6 +319,7 @@ export default function Home() {
 
                 <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                   <a href="/give" className="inline-flex w-full sm:w-auto sm:flex-1 justify-center items-center gap-3 rounded-full px-6 py-3 bg-white text-[var(--color-primary)] font-bold shadow-md">
+                    <GiftIcon className="h-4 w-4" />
                     Give Now
                   </a>
 

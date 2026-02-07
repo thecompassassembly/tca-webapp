@@ -7,13 +7,13 @@ import ThemeToggle from "./ThemeToggle";
 import { GiftIcon } from "lucide-react";
 
 const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/pastors", label: "Pastors" },
-    { href: "/sermons", label: "Sermons" },
-    { href: "/events", label: "Events" },
-    { href: "/give", label: "Give" },
-    { href: "/contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/pastors", label: "Pastors" },
+  { href: "/sermons", label: "Sermons" },
+  { href: "/events", label: "Events" },
+  { href: "/give", label: "Give" },
+  { href: "/contact", label: "Contact" },
 ];
 
 
@@ -38,10 +38,10 @@ const HeaderNav = () => {
         href="/"
       >
         <div className="relative flex w-full items-center justify-center rounded-md bg-black text-sm text-white antialiased lg:ml-10">
-          
+
           <div className="relative z-0 text-sm text-emerald-500">
             <Image src="/image.png" height={50} width={50} alt="Logo" className="h-6 md:h-6 lg:h-8 w-auto" />
-         
+
           </div>
         </div>
       </Link>
@@ -57,12 +57,12 @@ const HeaderNav = () => {
             {link.label}
           </Link>
         ))}
-       
- 
+
+
       </nav>
 
       <div className="flex flex-1 items-center justify-end gap-2 sm:gap-2 md:justify-end">
-        
+
         {/* <button className="relative flex w-fit items-center justify-start rounded-xl bg-white px-2 py-2 text-sm text-muted-foreground hover:shadow-input dark:bg-brand">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -81,13 +81,36 @@ const HeaderNav = () => {
           </svg>
         </button> */}
 
-            <div className="flex lg:hidden">
-
-        <ThemeToggle />
+        {/* Mobile controls */}
+        <div className="flex lg:hidden items-center gap-2">
+          <ThemeToggle />
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMobileMenuOpen((o) => !o)}
+            className="inline-flex items-center justify-center rounded-md p-2 text-foreground/80 hover:text-foreground hover:bg-foreground/10 focus:outline-none focus:ring-2 focus:ring-ring"
+          >
+            {/* Hamburger / Close icon */}
+            <span className="sr-only">Open main menu</span>
+            {mobileMenuOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                <path d="M18 6L6 18"></path>
+                <path d="M6 6l12 12"></path>
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                <path d="M3 6h18"></path>
+                <path d="M3 12h18"></path>
+                <path d="M3 18h18"></path>
+              </svg>
+            )}
+          </button>
         </div>
 
         {/* <span className="mx-3 flex lg:hidden text-nuetral-200 dark:text-neutral-700">|</span> */}
-        
+
         {/* <div className="hover:shadow-input relative hidden lg:flex cursor-pointer items-center justify-center rounded-xl p-2 space-x-2 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -121,13 +144,13 @@ const HeaderNav = () => {
           Contact
         </a>
 
-          
+
         <a
-        style={{
-        backgroundColor: "var(--color-primary)",
-        // color: "var(--color-accent)",
-      }}
-          className="no-underline flex space-x-2 group cursor-pointer transition duration-200 p-px font-semibold px-4 py-2 relative z-20 dark:text-white text-white h-10 items-center justify-center rounded-lg text-center text-sm w-fit flex-row items-center"
+          style={{
+            backgroundColor: "var(--color-primary)",
+            // color: "var(--color-accent)",
+          }}
+          className="no-underline hidden lg:flex space-x-2 group cursor-pointer transition duration-200 p-px font-semibold px-4 py-2 relative z-20 dark:text-white text-white h-10 items-center justify-center rounded-lg text-center text-sm w-fit flex-row items-center"
           href="/pricing"
         >
           <GiftIcon className="h-4 w-4" />
@@ -135,8 +158,37 @@ const HeaderNav = () => {
         </a>
         <div className="hidden lg:flex ">
 
-        <ThemeToggle />
+          <ThemeToggle />
         </div>
+      </div>
+      {/* Mobile menu panel */}
+      <div
+        id="mobile-menu"
+        className={`lg:hidden absolute left-0 right-0 top-full z-40 border-b border-[var(--color-border)] transition-all duration-200 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto h-screen' : 'opacity-0 pointer-events-none'}`}
+        style={{ backgroundColor: "var(--color-background)" }}
+      >
+        <nav className="px-4 py-4 space-y-3">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block rounded-md px-3 py-2 text-base font-medium text-foreground/80 hover:text-foreground hover:bg-foreground/10"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="mt-2 flex items-center gap-3 px-3">
+            <a
+              style={{ backgroundColor: "var(--color-primary)" }}
+              className="no-underline inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white w-full"
+              href="/pricing"
+            >
+              <GiftIcon className="h-4 w-4" />
+              <span>Give</span>
+            </a>
+          </div>
+        </nav>
       </div>
     </header>
   );
