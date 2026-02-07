@@ -42,15 +42,15 @@ export default function Home() {
             <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto" style={{ color: "var(--color-foreground)" }}>
               A warm and exciting Christian community where everyone is valued and cherished. Join us as we grow together in faith, hope, and love.
             </p>
-            <div className='flex gap-4'>
-              <a href="/live" aria-label="Watch Live" className="inline-flex items-center gap-3 rounded-full px-6 py-3 bg-white text-[var(--color-primary)] font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]">
+            <div className='flex justify-center w-full flex-col md:flex-row gap-4'>
+              <a href="/live" aria-label="Watch Live" className="inline-flex w-full md:w-auto md:flex-1 md:max-w-[240px] justify-center items-center gap-3 rounded-full px-6 py-3 bg-white text-[var(--color-primary)] font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]">
                 Watch Live
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4" aria-hidden>
                   <path d="M5 3v18l15-9-15-9z" fill="currentColor" />
                 </svg>
               </a>
 
-              <a href="/give" aria-label="Give to The Compass Assembly" className="inline-flex items-center gap-3 rounded-full px-6 py-3 bg-[var(--color-accent)] text-black font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]">
+              <a href="/give" aria-label="Give to The Compass Assembly" className="inline-flex w-full md:w-auto md:flex-1 md:max-w-[240px] justify-center items-center gap-3 rounded-full px-6 py-3 bg-[var(--color-accent)] text-black font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]">
                 Give for Pinnacle
               </a>
             </div>
@@ -314,11 +314,11 @@ export default function Home() {
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                  <a href="/give" className="inline-flex items-center gap-3 rounded-full px-6 py-3 bg-white text-[var(--color-primary)] font-bold shadow-md">
+                  <a href="/give" className="inline-flex w-full sm:w-auto sm:flex-1 justify-center items-center gap-3 rounded-full px-6 py-3 bg-white text-[var(--color-primary)] font-bold shadow-md">
                     Give Now
                   </a>
 
-                  <a href="/give?p=pinnacle" className="inline-flex items-center gap-3 rounded-full px-6 py-3 bg-[var(--color-accent)] text-black font-bold shadow-md">
+                  <a href="/give?p=pinnacle" className="inline-flex w-full sm:w-auto sm:flex-1 justify-center items-center gap-3 rounded-full px-6 py-3 bg-[var(--color-accent)] text-black font-bold shadow-md">
                     Give for Pinnacle
                   </a>
 
@@ -362,13 +362,13 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Image column */}
-              <div className="group relative w-full h-[420px] md:h-[560px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
+              <div className="order-2 md:order-1 group relative w-full h-[420px] md:h-[560px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
                 <Image src="/images/6051031874487914203.jpg" alt="Pastor Wisdom Osiri" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent" />
               </div>
 
               {/* Text column */}
-              <div>
+              <div className="order-1 md:order-2">
                 <div className="text-left mb-8">
                   <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: 'var(--color-primary)' }}>
                     Leadership

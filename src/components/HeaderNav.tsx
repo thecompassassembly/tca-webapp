@@ -9,7 +9,6 @@ import { GiftIcon } from "lucide-react";
 const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
     { href: "/pastors", label: "Pastors" },
     { href: "/sermons", label: "Sermons" },
     { href: "/events", label: "Events" },
