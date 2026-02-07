@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import HeaderNav from '@/components/HeaderNav';
 import FooterNav from '@/components/FooterNav';
 import { Users, Eye, Target } from 'lucide-react';
@@ -249,10 +249,11 @@ export default function Home() {
               </div>
 
               <Swiper
-                modules={[Navigation]}
+                modules={[Navigation, Autoplay]}
                 navigation={{ prevEl: '.sermons-prev', nextEl: '.sermons-next' }}
                 slidesPerView={1}
                 loop
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
                 className="w-full"
               >
                 <SwiperSlide>
@@ -501,9 +502,10 @@ export default function Home() {
               </div>
 
               <Swiper
-                modules={[Navigation]}
+                modules={[Navigation, Autoplay]}
                 navigation={{ prevEl: '.events-prev', nextEl: '.events-next' }}
                 loop
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
                 spaceBetween={16}
                 breakpoints={{
                   0: { slidesPerView: 1 },
