@@ -356,6 +356,46 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Meet Our Lead Pastor (side-by-side) */}
+        <section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: 'var(--color-background)' }}>
+          <div className="max-w-7xl mx-auto">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Image column */}
+              <div className="group relative w-full h-[420px] md:h-[560px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
+                <Image src="/images/6051031874487914203.jpg" alt="Pastor Wisdom Osiri" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent" />
+              </div>
+
+              {/* Text column */}
+              <div>
+                <div className="text-left mb-8">
+                  <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: 'var(--color-primary)' }}>
+                    Leadership
+                  </p>
+                  <h2 className="mt-4 text-3xl md:text-5xl font-black uppercase tracking-widest" style={{ color: 'var(--color-foreground)' }}>
+                    Meet Our Lead Pastor
+                  </h2>
+                </div>
+
+                <h3 className="text-3xl md:text-4xl font-black" style={{ color: 'var(--color-foreground)' }}>
+                  Pastor Wisdom Osiri
+                </h3>
+                <p className="mt-4 text-base md:text-lg opacity-80">
+                  Lead Pastor of The Compass Assembly — shepherding our community in faith, hope, and love. With a heart for people and a passion for God’s Word, Pastor Wisdom inspires and equips believers to live out their calling.
+                </p>
+                <p className="mt-4 text-base md:text-lg opacity-80">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius reprehenderit excepturi itaque vitae libero eaque, molestiae asperiores sint placeat! A corrupti voluptates modi eum laudantium iste recusandae tempore obcaecati odit.</p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a href="/pastors" className="inline-flex items-center gap-2 rounded-full px-5 py-3 bg-white text-[var(--color-primary)] font-bold shadow-md">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* our services / cruise */}
         <section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: "var(--color-background)" }}>
           <div className="max-w-7xl mx-auto">
@@ -448,12 +488,12 @@ export default function Home() {
             {/* Custom arrows for events slider */}
             <div className="relative">
               <div className="absolute right-0 -bottom-14 z-10 flex items-center gap-3">
-                <button aria-label="Previous" className="events-prev flex items-center justify-center w-10 h-10 rounded-full bg-white/15 backdrop-blur-sm text-white shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/25 transition">
+                <button aria-label="Previous" className="events-prev flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-primary)] text-black shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:brightness-110 transition">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                     <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
-                <button aria-label="Next" className="events-next flex items-center justify-center w-10 h-10 rounded-full bg-white/15 backdrop-blur-sm text-white shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/25 transition">
+                <button aria-label="Next" className="events-next flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-primary)] text-black shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:brightness-110 transition">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                     <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -461,59 +501,59 @@ export default function Home() {
               </div>
 
               <Swiper
-              modules={[Navigation]}
-              navigation={{ prevEl: '.events-prev', nextEl: '.events-next' }}
-              loop
-              spaceBetween={16}
-              breakpoints={{
-                0: { slidesPerView: 1 },
-                640: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-              }}
-              className="w-full"
-            >
-              <SwiperSlide>
-                <a href="/events" className="group relative block w-full h-64 md:h-80 overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.18)]">
-                  <Image src="/images/6051031874487914218.jpg" alt="Event 1" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-                  <div className="absolute left-4 bottom-4 text-left text-white max-w-[80%]">
-                    <h3 className="text-lg md:text-xl font-bold leading-tight">Youth Conference</h3>
-                    <p className="mt-1 text-xs md:text-sm opacity-80">Highlights and moments from our latest youth gathering.</p>
-                  </div>
-                </a>
-              </SwiperSlide>
-              <SwiperSlide>
-                <a href="/events" className="group relative block w-full h-64 md:h-80 overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.18)]">
-                  <Image src="/images/6051031874487914224.jpg" alt="Event 2" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-                  <div className="absolute left-4 bottom-4 text-left text-white max-w-[80%]">
-                    <h3 className="text-lg md:text-xl font-bold leading-tight">Community Outreach</h3>
-                    <p className="mt-1 text-xs md:text-sm opacity-80">Serving our neighborhoods together.</p>
-                  </div>
-                </a>
-              </SwiperSlide>
-              <SwiperSlide>
-                <a href="/events" className="group relative block w-full h-64 md:h-80 overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.18)]">
-                  <Image src="/images/6051031874487914151.jpg" alt="Event 3" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-                  <div className="absolute left-4 bottom-4 text-left text-white max-w-[80%]">
-                    <h3 className="text-lg md:text-xl font-bold leading-tight">Worship Night</h3>
-                    <p className="mt-1 text-xs md:text-sm opacity-80">An evening of praise, prayer, and testimonies.</p>
-                  </div>
-                </a>
-              </SwiperSlide>
-              <SwiperSlide>
-                <a href="/events" className="group relative block w-full h-64 md:h-80 overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.18)]">
-                  <Image src="/images/6051031874487914203.jpg" alt="Event 4" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-                  <div className="absolute left-4 bottom-4 text-left text-white max-w-[80%]">
-                    <h3 className="text-lg md:text-xl font-bold leading-tight">Leadership Seminar</h3>
-                    <p className="mt-1 text-xs md:text-sm opacity-80">Equipping leaders for impact.</p>
-                  </div>
-                </a>
-              </SwiperSlide>
-            </Swiper>
+                modules={[Navigation]}
+                navigation={{ prevEl: '.events-prev', nextEl: '.events-next' }}
+                loop
+                spaceBetween={16}
+                breakpoints={{
+                  0: { slidesPerView: 1 },
+                  640: { slidesPerView: 1 },
+                  768: { slidesPerView: 2 },
+                  1024: { slidesPerView: 3 }
+                }}
+                className="w-full"
+              >
+                <SwiperSlide>
+                  <a href="/events" className="group relative block w-full h-64 md:h-80 overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.18)]">
+                    <Image src="/images/6051031874487914218.jpg" alt="Event 1" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                    <div className="absolute left-4 bottom-4 text-left text-white max-w-[80%]">
+                      <h3 className="text-lg md:text-xl font-bold leading-tight">Youth Conference</h3>
+                      <p className="mt-1 text-xs md:text-sm opacity-80">Highlights and moments from our latest youth gathering.</p>
+                    </div>
+                  </a>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <a href="/events" className="group relative block w-full h-64 md:h-80 overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.18)]">
+                    <Image src="/images/6051031874487914224.jpg" alt="Event 2" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                    <div className="absolute left-4 bottom-4 text-left text-white max-w-[80%]">
+                      <h3 className="text-lg md:text-xl font-bold leading-tight">Community Outreach</h3>
+                      <p className="mt-1 text-xs md:text-sm opacity-80">Serving our neighborhoods together.</p>
+                    </div>
+                  </a>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <a href="/events" className="group relative block w-full h-64 md:h-80 overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.18)]">
+                    <Image src="/images/6051031874487914151.jpg" alt="Event 3" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                    <div className="absolute left-4 bottom-4 text-left text-white max-w-[80%]">
+                      <h3 className="text-lg md:text-xl font-bold leading-tight">Worship Night</h3>
+                      <p className="mt-1 text-xs md:text-sm opacity-80">An evening of praise, prayer, and testimonies.</p>
+                    </div>
+                  </a>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <a href="/events" className="group relative block w-full h-64 md:h-80 overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.18)]">
+                    <Image src="/images/6051031874487914203.jpg" alt="Event 4" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                    <div className="absolute left-4 bottom-4 text-left text-white max-w-[80%]">
+                      <h3 className="text-lg md:text-xl font-bold leading-tight">Leadership Seminar</h3>
+                      <p className="mt-1 text-xs md:text-sm opacity-80">Equipping leaders for impact.</p>
+                    </div>
+                  </a>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </section>
