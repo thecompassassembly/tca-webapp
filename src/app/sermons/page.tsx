@@ -6,13 +6,16 @@ import SubHero from '@/components/SubHero';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { PlayIcon, ArrowRight } from 'lucide-react';
+import { PlayIcon, ArrowRight, Search } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { useState } from 'react';
 
 export default function Sermons() {
+    const [searchTerm, setSearchTerm] = useState('');
+
     const featuredSermons = [
         {
             id: 1,
@@ -35,6 +38,57 @@ export default function Sermons() {
             title: "Living with Purpose",
             date: "Sunday, January 25, 2026",
             description: "Explore God's calling on your life and how to walk in your divine purpose every day.",
+            image: "/images/logo-compass.jpg",
+            speaker: "Pastor Wisdom Osiri"
+        }
+    ];
+
+    const generalSermons = [
+        {
+            id: 4,
+            title: "The Power of Prayer",
+            date: "Feb 1, 2026",
+            description: "Discover how prayer transforms lives and strengthens our relationship with God.",
+            image: "/images/logo-compass.jpg",
+            speaker: "Pastor Favour Osiri"
+        },
+        {
+            id: 5,
+            title: "Grace Abounding",
+            date: "Jan 25, 2026",
+            description: "Understanding the depth of God's grace in our daily lives.",
+            image: "/images/logo-compass.jpg",
+            speaker: "Pastor Wisdom Osiri"
+        },
+        {
+            id: 6,
+            title: "Community and Fellowship",
+            date: "Jan 18, 2026",
+            description: "The importance of building strong relationships in faith.",
+            image: "/images/logo-compass.jpg",
+            speaker: "Pastor Favour Osiri"
+        },
+        {
+            id: 7,
+            title: "Hope in Trials",
+            date: "Jan 11, 2026",
+            description: "Finding strength and hope during challenging times.",
+            image: "/images/logo-compass.jpg",
+            speaker: "Pastor Wisdom Osiri"
+        },
+        {
+            id: 8,
+            title: "Worship and Praise",
+            date: "Jan 4, 2026",
+            description: "The power of worship in connecting with God.",
+            image: "/images/logo-compass.jpg",
+            speaker: "Guest Speaker"
+        },
+        {
+            id: 9,
+            title: "Servant Leadership",
+            date: "Dec 28, 2025",
+            description: "Lessons on leadership from the life of Jesus.",
             image: "/images/logo-compass.jpg",
             speaker: "Pastor Wisdom Osiri"
         }
@@ -131,6 +185,7 @@ export default function Sermons() {
                             </div>
                         </motion.div>
 
+
                         {/* General Sermons */}
                         <motion.div
                             initial={{ opacity: 0, y: 24 }}
@@ -138,23 +193,48 @@ export default function Sermons() {
                             viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                         >
-                            <div className="text-left mb-12">
-                                <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: 'var(--color-primary)' }}>
-                                    Recent
-                                </p>
-                                <h2 className="mt-4 text-3xl md:text-5xl font-black uppercase tracking-widest" style={{ color: 'var(--color-foreground)' }}>
-                                    Recent Sermons
-                                </h2>
-                                <p className="mt-4 max-w-2xl text-base md:text-lg leading-relaxed opacity-80">
-                                    Catch up on our latest teachings and messages.
-                                </p>
+                            <div className='lg:grid grid-cols-2'>
+                                <div className="text-left mb-12">
+                                    <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: 'var(--color-primary)' }}>
+                                        Recent
+                                    </p>
+                                    <h2 className="mt-4 text-3xl md:text-5xl font-black uppercase tracking-widest" style={{ color: 'var(--color-foreground)' }}>
+                                        Recent Sermons
+                                    </h2>
+                                    <p className="mt-4 max-w-2xl text-base md:text-lg leading-relaxed opacity-80">
+                                        Catch up on our latest teachings and messages.
+                                    </p>
+                                </div>
+                                {/* Search Bar */}
+                                <motion.div
+                                    className="mb-12 mt-auto"
+                                    initial={{ opacity: 0, y: 24 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                                >
+                                    <div className="relative max-w-md ml-auto">
+                                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-foreground/50" />
+                                        <input
+                                            type="text"
+                                            placeholder="Search sermons..."
+                                            value={searchTerm}
+                                            onChange={(e) => setSearchTerm(e.target.value)}
+                                            className="w-full pl-10 pr-4 py-3 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-foreground)] placeholder-foreground/50 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+                                        />
+                                    </div>
+                                </motion.div>
                             </div>
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {/* Sermon Card 1 */}
-                                {[1, 2, 3, 4, 5, 6].map((index) =>
-                                    <div key={index} className="bg-[var(--color-surface)] overflow-hidden transition-shadow">
+                                {/* Sermon Card */}
+                                {generalSermons.filter(sermon =>
+                                    sermon.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                    sermon.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                    sermon.speaker.toLowerCase().includes(searchTerm.toLowerCase())
+                                ).map((sermon) =>
+                                    <div key={sermon.id} className="bg-[var(--color-surface)] overflow-hidden transition-shadow">
                                         <div className="relative aspect-video">
-                                            <Image src="/images/logo-compass.jpg" alt="Sermon Title" fill className="object-cover" />
+                                            <Image src={sermon.image} alt={sermon.title} fill className="object-cover" />
                                             <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                                                 <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                                                     <PlayIcon className="w-6 h-6 text-white ml-0.5" />
@@ -162,9 +242,9 @@ export default function Sermons() {
                                             </div>
                                         </div>
                                         <div className="p-4">
-                                            <p className="text-xs text-foreground/70 mb-1">Feb 1, 2026</p>
-                                            <h4 className="text-lg font-semibold mb-2">The Power of Prayer</h4>
-                                            <p className="text-sm text-foreground/80 mb-3">Discover how prayer transforms lives and strengthens our relationship with God.</p>
+                                            <p className="text-xs text-foreground/70 mb-1">{sermon.date}</p>
+                                            <h4 className="text-lg font-semibold mb-2">{sermon.title}</h4>
+                                            <p className="text-sm text-foreground/80 mb-3">{sermon.description}</p>
                                             <Link href="#" className="text-sm font-medium text-[var(--color-primary)] hover:underline flex items-center">Listen Now <ArrowRight className="w-3 h-3 ml-1" /></Link>
                                         </div>
                                     </div>)}
