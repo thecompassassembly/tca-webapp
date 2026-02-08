@@ -18,12 +18,42 @@ export default function Contact() {
     >
       <HeaderNav />
       <main className="py-16 px-8">
-        <div className="flex flex-col gap-3 py-6 px-90 rounded-2xl text-white">
-          <h1 className="text-6xl font-semibold">Contact us</h1>
-          <p className="text-xl text-gray-300">
+        <div
+          className="flex flex-col gap-3 py-6 px-90 rounded-2xl"
+          style={{
+            backgroundColor: "var(--color-background)",
+            color: "var(--color-foreground)",
+            borderColor: "var(--color-secondary)",
+          }}
+        >
+          <h1
+            className="text-6xl font-semibold"
+            style={{
+              backgroundColor: "var(--color-background)",
+              color: "var(--color-foreground)",
+              borderColor: "var(--color-secondary)",
+            }}
+          >
+            Contact us
+          </h1>
+          <p
+            className="text-xl"
+            style={{
+              backgroundColor: "var(--color-background)",
+              color: "var(--color-foreground)",
+              borderColor: "var(--color-secondary)",
+            }}
+          >
             Our friendly team would love to hear from you.
           </p>
-          <form className="flex flex-col gap-6 mt-6">
+          <form
+            className="flex flex-col gap-6 mt-6"
+            style={{
+              backgroundColor: "var(--color-background)",
+              color: "var(--color-foreground)",
+              borderColor: "var(--color-secondary)",
+            }}
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
               <div className="flex flex-col gap-2">
                 <p>
@@ -105,11 +135,25 @@ export default function Contact() {
         <br />
         <br />
         <br />
-        <div className="flex flex-col gap-4 px-30">
-          <h2 className="text-2xl font-semibold text-blue-300">
+        <div
+          className="flex flex-col gap-4 px-30"
+          style={{
+            backgroundColor: "var(--color-background)",
+            color: "var(--color-foreground)",
+            borderColor: "var(--color-secondary)",
+          }}
+        >
+          <h2 className="text-2xl font-semibold text-blue-600">
             Our locations
           </h2>
-          <h1 className="text-5xl font-semibold text-white">
+          <h1
+            className="text-5xl font-semibold text-white"
+            style={{
+              backgroundColor: "var(--color-background)",
+              color: "var(--color-foreground)",
+              borderColor: "var(--color-secondary)",
+            }}
+          >
             Visit any of our expressions
           </h1>
           <p className="text-2xl">Find us at these locations.</p>
@@ -144,7 +188,14 @@ export default function Contact() {
             <div className="font-semibold border-2 border-white rounded-full px-4 py-1 pb-1 text-sm bg-blue-700">
               <p className="text-white">Contact us</p>
             </div>
-            <h1 className="text-4xl text-white font-semibold">
+            <h1
+              className="text-4xl text-white font-semibold"
+              style={{
+                backgroundColor: "var(--color-background)",
+                color: "var(--color-foreground)",
+                borderColor: "var(--color-secondary)",
+              }}
+            >
               We'd love to hear from you.
             </h1>
             <h2 className="text-2xl">Chat with our friendly team</h2>
