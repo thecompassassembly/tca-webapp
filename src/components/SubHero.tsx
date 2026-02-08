@@ -16,7 +16,7 @@ export default function SubHero({ imageSrc, title, subtitle, pillText, className
         <section
             className={
                 [
-                    "relative w-full h-[420px] md:h-[620px] overflow-hidden",
+                    "relative w-full h-[420px] md:h-[520px] overflow-hidden",
                     className ?? "",
                 ].join(" ")
             }
@@ -33,7 +33,7 @@ export default function SubHero({ imageSrc, title, subtitle, pillText, className
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
             </div>
 
-            <div className="relative z-10 h-full max-w-7xl mx-auto px-6 md:px-12 flex items-end">
+            <div className="relative z-10 h-full max-w-7xl mx-auto px-6 md:px-0 flex items-end">
                 <div className="pb-8 md:pb-10">
                     {pillText && (
                         <span

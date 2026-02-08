@@ -36,7 +36,7 @@ export default function Home() {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           {/* Content */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }} className="relative z-20 flex flex-col items-center justify-center max-w-3xl mx-auto w-full h-full text-center px-4">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }} className="relative z-20 flex flex-col items-center justify-center max-w-3xl w-full h-full text-center px-4">
             <h1 className="text-4xl md:text-6xl font-black uppercase tracking-widest mb-6" style={{ color: "var(--color-secondary)" }}>
               Welcome to The Compass Assembly
             </h1>
@@ -133,14 +133,14 @@ export default function Home() {
         {/* Our Expressions Section */}
         <motion.section className="w-full py-20 lg:px-0 px-6 md:px-12" style={{ backgroundColor: "var(--color-background)" }} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}>
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-left mb-12">
               <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: "var(--color-primary)" }}>
                 Our Locations
               </p>
               <h2 className="mt-4 text-3xl md:text-5xl font-black uppercase tracking-widest" style={{ color: "var(--color-foreground)" }}>
                 Our Expressions
               </h2>
-              <p className="mt-4 max-w-2xl mx-auto text-base md:text-lg leading-relaxed opacity-80">
+              <p className="mt-4 max-w-2xl text-base md:text-lg leading-relaxed opacity-80">
                 Join us at any of our three vibrant locations across the region.
               </p>
             </div>
@@ -478,14 +478,14 @@ export default function Home() {
         {/* Recent Events Section */}
         <section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: 'var(--color-background)' }}>
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-left mb-12">
               <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: 'var(--color-primary)' }}>
                 Happenings
               </p>
               <h2 className="mt-4 text-3xl md:text-5xl font-black uppercase tracking-widest" style={{ color: 'var(--color-foreground)' }}>
                 Recent Events
               </h2>
-              <p className="mt-4 max-w-2xl mx-auto text-base md:text-lg leading-relaxed opacity-80">
+              <p className="mt-4 max-w-2xl text-base md:text-lg leading-relaxed opacity-80">
                 Catch up on what’s been happening across The Compass Assembly.
               </p>
             </div>
@@ -493,12 +493,12 @@ export default function Home() {
             {/* Custom arrows for events slider */}
             <div className="relative">
               <div className="absolute right-0 -bottom-14 z-10 flex items-center gap-3">
-                <button aria-label="Previous" className="events-prev flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-primary)] text-black shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:brightness-110 transition">
+                <button aria-label="Previous" className="events-prev flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-primary)] text-white shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:brightness-110 transition">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                     <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
-                <button aria-label="Next" className="events-next flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-primary)] text-black shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:brightness-110 transition">
+                <button aria-label="Next" className="events-next flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-primary)] text-white shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:brightness-110 transition">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                     <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
