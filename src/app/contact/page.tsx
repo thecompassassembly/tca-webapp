@@ -160,7 +160,16 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium text-white">Rumumasi</h2>
+              <h2
+                className="text-2xl font-medium text-white"
+                style={{
+                  backgroundColor: "var(--color-background)",
+                  color: "var(--color-foreground)",
+                  borderColor: "var(--color-secondary)",
+                }}
+              >
+                Rumumasi
+              </h2>
               <p className="text-lg">
                 The Compass Assembly Headquarters <br />
                 Rumumasi Market Junction <br />
@@ -168,14 +177,32 @@ export default function Contact() {
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium text-white">Rumuosi</h2>
+              <h2
+                className="text-2xl font-medium text-white"
+                style={{
+                  backgroundColor: "var(--color-background)",
+                  color: "var(--color-foreground)",
+                  borderColor: "var(--color-secondary)",
+                }}
+              >
+                Rumuosi
+              </h2>
               <p className="text-lg">
                 Rumumasi Market Junction <br />
                 Port-Harcourt
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium text-white">Obibo</h2>
+              <h2
+                className="text-2xl font-medium text-white"
+                style={{
+                  backgroundColor: "var(--color-background)",
+                  color: "var(--color-foreground)",
+                  borderColor: "var(--color-secondary)",
+                }}
+              >
+                Oyigbo
+              </h2>
               <p className="text-lg">
                 Rumumasi Market Junction <br />
                 Port-Harcourt
