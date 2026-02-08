@@ -139,6 +139,29 @@ export default function Contact() {
             </div>
           </div>
         </div>
+        <div className="flex flex-col gap-4 px-30 mt-20">
+          <div className="flex flex-col items-center gap-2">
+            <div className="font-semibold border-2 border-white rounded-full px-4 py-1 pb-1 text-sm bg-blue-700">
+              <p className="text-white">Contact us</p>
+            </div>
+            <h1 className="text-4xl text-white font-semibold">
+              We'd love to hear from you.
+            </h1>
+            <h2 className="text-2xl">Chat with our friendly team</h2>
+          </div>
+          <img
+            src="/images/pastors.jpg"
+            alt="Pastor Wisdom & Favour Osiri"
+            className="my-10 w-auto h-auto"
+          />
+        </div>
+        <div>
+          <div className="">
+            <p className="text-2xl font-semibold">Call us</p>
+            <p className="text-xl">Mon-Sun from 8am to 5pm.</p>
+            <p>+2340123456789</p>
+          </div>
+        </div>
       </main>
       <FooterNav />
     </div>
