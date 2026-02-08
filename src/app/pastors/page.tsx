@@ -26,14 +26,14 @@ export default function Pastors() {
                 <section className="px-6 md:px-8 py-20">
                     <div className="max-w-7xl mx-auto">
                         <motion.div
-                            className="text-center my-20"
+                            className="text-left my-20"
                             initial={{ opacity: 0, y: 24 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                         >
                             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-widest mb-4">Meet Our Pastors</h1>
-                            <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
+                            <p className="text-lg md:text-xl text-foreground/80 max-w-3xl">
                                 Discover the visionary leaders guiding The Compass Assembly. Their passion for God's Word and unwavering commitment to community inspire us all to live with purpose and faith.
                             </p>
                         </motion.div>
