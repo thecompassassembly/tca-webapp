@@ -233,8 +233,15 @@ export default function Contact() {
             className="my-10 w-auto h-auto"
           />
         </div>
-        <div>
-          <div className="">
+        <div className="flex flex-col gap-6">
+          <div
+            className="min-h-screen "
+            style={{
+              backgroundColor: "var(--color-background)",
+              color: "var(--color-foreground)",
+              borderColor: "var(--color-secondary)",
+            }}
+          >
             <p className="text-2xl font-semibold">Call us</p>
             <p className="text-xl">Mon-Sun from 8am to 5pm.</p>
             <p>+2340123456789</p>
