@@ -7,6 +7,7 @@ import "react-phone-input-2/lib/style.css";
 
 export default function Contact() {
   const [phone, setPhone] = useState<string>("");
+
   return (
     <div
       className="min-h-screen "
@@ -136,7 +137,7 @@ export default function Contact() {
         <br />
         <br />
         <div
-          className="flex flex-col gap-4 px-30"
+          className="flex flex-col gap-4 px-30 justify-center items-center"
           style={{
             backgroundColor: "var(--color-background)",
             color: "var(--color-foreground)",
@@ -158,7 +159,7 @@ export default function Contact() {
           </h1>
           <p className="text-2xl">Find us at these locations.</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-9 mt-6">
             <div className="flex flex-col gap-3">
               <h2
                 className="text-2xl font-medium text-white"
@@ -170,13 +171,13 @@ export default function Contact() {
               >
                 Rumumasi
               </h2>
-              <p className="text-lg">
+              <p className="text-lg text-gray-500">
                 The Compass Assembly Headquarters <br />
                 Rumumasi Market Junction <br />
                 Port-Harcourt
               </p>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 ml-20">
               <h2
                 className="text-2xl font-medium text-white"
                 style={{
@@ -187,7 +188,7 @@ export default function Contact() {
               >
                 Rumuosi
               </h2>
-              <p className="text-lg">
+              <p className="text-lg text-gray-500">
                 Rumumasi Market Junction <br />
                 Port-Harcourt
               </p>
@@ -203,7 +204,7 @@ export default function Contact() {
               >
                 Oyigbo
               </h2>
-              <p className="text-lg">
+              <p className="text-lg text-gray-500">
                 Rumumasi Market Junction <br />
                 Port-Harcourt
               </p>
@@ -233,19 +234,37 @@ export default function Contact() {
             className="my-10 w-auto h-auto"
           />
         </div>
-        <div className="flex flex-col gap-6">
-          <div
-            className="min-h-screen "
-            style={{
-              backgroundColor: "var(--color-background)",
-              color: "var(--color-foreground)",
-              borderColor: "var(--color-secondary)",
-            }}
-          >
+        <div
+          className="grid grid-cols-2 gap-x-10 gap-y-10 px-30"
+          style={{
+            backgroundColor: "var(--color-background)",
+            color: "var(--color-foreground)",
+            borderColor: "var(--color-secondary)",
+          }}
+        >
+          <div className="flex flex-col gap-6 bg-green-500/6 py-10 px-20 mt-20">
             <p className="text-2xl font-semibold">Call us</p>
-            <p className="text-xl">Mon-Sun from 8am to 5pm.</p>
-            <p>+2340123456789</p>
+            <p className="text-lg text-gray-600">Mon-Sun from 8am to 5pm.</p>
+            <p className="font-semibold text-blue-700">+2340123456789</p>
           </div>
+          <div className="flex flex-col gap-6 bg-green-500/6 py-10 px-20 mt-20">
+            <p className="text-2xl font-semibold">Chat with us</p>
+            <p className="text-lg text-gray-600">Mon-Sun from 8am to 5pm.</p>
+            <p className="font-semibold text-blue-700">+2340123456789</p>
+          </div>
+          <div className="flex flex-col gap-6 bg-green-500/6 py-10 px-20">
+            <p className="text-2xl font-semibold">Visit us</p>
+            <p className="text-lg text-gray-600">Mon-Sun from 8am to 5pm.</p>
+            <p className="font-semibold text-blue-700">+2340123456789</p>
+          </div>
+        </div>
+        <div className="relative w-full mt-20 h-[300px] md:h-[400px] rounded-lg overflow-hidden px-30">
+          <iframe
+            title="University of Oxford Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31805.367469067973!2d6.9891100108398545!3d4.826447600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cdc8803bda11%3A0x535ba213ec316a71!2sRumuomasi%20Market!5e0!3m2!1sen!2sng!4v1770882224584!5m2!1sen!2sng"
+            className="w-full h-full border-0 rounded-lg"
+            loading="lazy"
+          ></iframe>
         </div>
       </main>
       <FooterNav />
