@@ -171,7 +171,7 @@ export default function Contact() {
               >
                 Rumumasi
               </h2>
-              <p className="text-lg text-gray-500">
+              <p className="text-lg text-gray-400">
                 The Compass Assembly Headquarters <br />
                 Rumumasi Market Junction <br />
                 Port-Harcourt
@@ -188,7 +188,7 @@ export default function Contact() {
               >
                 Rumuosi
               </h2>
-              <p className="text-lg text-gray-500">
+              <p className="text-lg text-gray-400">
                 Rumumasi Market Junction <br />
                 Port-Harcourt
               </p>
@@ -204,7 +204,7 @@ export default function Contact() {
               >
                 Oyigbo
               </h2>
-              <p className="text-lg text-gray-500">
+              <p className="text-lg text-gray-400">
                 Rumumasi Market Junction <br />
                 Port-Harcourt
               </p>
