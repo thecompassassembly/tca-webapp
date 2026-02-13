@@ -128,8 +128,6 @@ h6,
 
 button {
   cursor: pointer;
-<<<<<<< HEAD
-=======
 }
 
 
@@ -146,5 +144,4 @@ button {
   text-shadow:
     0 0 25px rgba(99, 102, 241, 0.25),
     0 0 60px rgba(99, 102, 241, 0.15);
->>>>>>> 028c5d6 (first commit)
 }
