@@ -9,11 +9,13 @@ export default function Units() {
     const [selectedUnit, setSelectedUnit] = useState<any>(null); 
 
     return (
-        <div className="min-h-screen bg-[var(--color-background)] text-[var(--color-foreground)]">
+        <div className="min-h-screen " style={{ backgroundColor: "var(--color-background)", color: "var(--color-foreground)" }}>
             <main className="max-w-7xl mx-auto px-8 py-16">
-                <h1 className="text-4xl md:text-5xl font-bold font-serif text-center text-white mb-12">
-                    Church Workforce Units
-                </h1>
+                {/* <h1 className="text-4xl md:text-5xl font-bold font-serif text-center text-white mb-12">
+                    TCA Workforce Units
+                </h1> */}
+
+                
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {churchUnits.map((unit: any, i: number) => (
@@ -33,8 +35,8 @@ export default function Units() {
                             )}
 
                             <div className="p-6 space-y-3">
-                                <h3 className="text-2xl font-bold text-white">{unit.name}</h3>
-                                <p className="text-white/70">{unit.description}</p>
+                                <h3 className="text-2xl font-bold ">{unit.name}</h3>
+                                <p className="">{unit.description}</p>
 
                                 <button
                                     onClick={() => setSelectedUnit(unit)} 

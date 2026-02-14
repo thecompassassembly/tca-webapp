@@ -9,27 +9,55 @@ type SubHeroProps = {
     subtitle?: string;
     pillText?: string;
     className?: string;
+// i added this for my about us page
+    heightClass?: string;       
+    imagePosition?: string;
+    children?: React.ReactNode;
 };
 
-export default function SubHero({ imageSrc, title, subtitle, pillText, className }: SubHeroProps) {
+
+
+export default function SubHero({
+    imageSrc,
+    title,
+    subtitle,
+    pillText,
+    className,
+    heightClass = "h-[420px] md:h-[520px]",
+    imagePosition = "object-top",
+    children,
+}: SubHeroProps) {
     return (
         <section
             className={
                 [
-                    "relative w-full h-[420px] md:h-[520px] overflow-hidden",
+                    // "relative w-full h-[420px] md:h-[520px] overflow-hidden",
+                    "relative w-full overflow-hidden",
+                    heightClass,
                     className ?? "",
                 ].join(" ")
             }
             style={{ backgroundColor: "var(--color-background)" }}
         >
-            <div className="absolute inset-0">
+            {/* <div className="absolute inset-0">
                 <Image
                     src={imageSrc}
                     alt={title}
                     fill
                     priority
                     className="object-cover object-top"
+                /> */}
+            
+            <div className="absolute inset-0">
+                <Image
+                    src={imageSrc}
+                    alt={title}
+                    fill
+                    priority
+                    className={`object-cover ${imagePosition}`}
                 />
+
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
             </div>
 
@@ -56,6 +84,9 @@ export default function SubHero({ imageSrc, title, subtitle, pillText, className
                             {subtitle}
                         </p>
                     )}
+
+                    {/* 👇 THIS IS WHERE YOUR BUTTON WILL RENDER */}
+                    {children}
                 </div>
             </div>
         </section>

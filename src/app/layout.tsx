@@ -49,12 +49,9 @@ export default function RootLayout({
           }}
         />
       </head>
-<<<<<<< HEAD
       <body className={`${inter.variable} ${poppins.variable} antialiased`}>
-=======
-      <body className={`antialiased`}>
+      {/* <body className={`antialiased`}> */}
         <AOSProvider>
->>>>>>> 028c5d6 (first commit)
         {children}
       </AOSProvider>
       </body>
