@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
+// import AOSProvider from "@/components/providers/AosProvider";
+import AOSProvider from "@/components/providers/AOSProvider";
+
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,7 +50,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${poppins.variable} antialiased`}>
+      {/* <body className={`antialiased`}> */}
+        <AOSProvider>
         {children}
+      </AOSProvider>
       </body>
     </html>
   );
