@@ -109,9 +109,16 @@ export default function Home() {
                 <div className="relative w-full h-72 md:h-96">
                   <Image src="/images/6051031874487914224.jpg" alt="Sermons" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute left-6 bottom-6 text-left text-white">
-                    <h4 className="text-2xl font-bold">Sermons</h4>
-                    <p className="mt-2 opacity-80">Access our latest teachings and messages.</p>
+                  <div className="absolute left-6 bottom-6 right-6 text-left text-white flex items-end justify-between">
+                    <div>
+                      <h4 className="text-2xl font-bold">Sermons</h4>
+                      <p className="mt-2 opacity-80">Access our latest teachings and messages.</p>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 flex-shrink-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -121,9 +128,16 @@ export default function Home() {
                 <div className="relative w-full h-72 md:h-96">
                   <Image src="/images/6051031874487914218.jpg" alt="Events" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute left-6 bottom-6 text-left text-white">
-                    <h4 className="text-2xl font-bold">Events</h4>
-                    <p className="mt-2 opacity-80">Stay updated on upcoming activities and gatherings.</p>
+                  <div className="absolute left-6 bottom-6 right-6 text-left text-white flex items-end justify-between">
+                    <div>
+                      <h4 className="text-2xl font-bold">Events</h4>
+                      <p className="mt-2 opacity-80">Stay updated on upcoming activities and gatherings.</p>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 flex-shrink-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -159,13 +173,20 @@ export default function Home() {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   {/* Text on image */}
-                  <div className="absolute bottom-0 left-0 p-6 text-left">
-                    <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
-                      Rumumasi
-                    </h3>
-                    <p className="mt-2 text-sm md:text-base text-white/80">
-                      Experience worship and community at our Rumumasi expression.
-                    </p>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-left flex items-end justify-between">
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
+                        Rumumasi
+                      </h3>
+                      {/* <p className="mt-2 text-sm md:text-base text-white/80">
+                        Experience worship and community at our Rumumasi expression.
+                      </p> */}
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -182,13 +203,20 @@ export default function Home() {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   {/* Text on image */}
-                  <div className="absolute bottom-0 left-0 p-6 text-left">
-                    <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
-                      Rumuosi
-                    </h3>
-                    <p className="mt-2 text-sm md:text-base text-white/80">
-                      Connect and grow with us at our Rumuosi expression.
-                    </p>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-left flex items-end justify-between">
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
+                        Rumuosi
+                      </h3>
+                      {/* <p className="mt-2 text-sm md:text-base text-white/80">
+                        Connect and grow with us at our Rumuosi expression.
+                      </p> */}
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -205,13 +233,20 @@ export default function Home() {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   {/* Text on image */}
-                  <div className="absolute bottom-0 left-0 p-6 text-left">
-                    <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
-                      Oyigbo
-                    </h3>
-                    <p className="mt-2 text-sm md:text-base text-white/80">
-                      Be part of our thriving Oyigbo expression.
-                    </p>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-left flex items-end justify-between">
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
+                        Oyigbo
+                      </h3>
+                      {/* <p className="mt-2 text-sm md:text-base text-white/80">
+                        Be part of our thriving Oyigbo expression.
+                      </p> */}
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
