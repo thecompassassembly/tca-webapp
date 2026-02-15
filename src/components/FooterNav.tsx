@@ -3,7 +3,7 @@ import React from "react";
 const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About TCA" },
-    { href: "/services", label: "Services" },
+    // { href: "/services", label: "Services" },
     { href: "/pastors", label: "Pastors" },
     { href: "/sermons", label: "Sermons" },
     { href: "/events", label: "Events" },
@@ -12,13 +12,13 @@ const navLinks = [
 ];
 
 const quicklinks = [
-  { href: "/", label: "Pastors" },
-  { href: "/", label: "Communities" },
+  { href: "/pastors", label: "Pastors" },
+  { href: "/", label: "Missional Communities" },
   { href: "/", label: "Testimonies" },
   { href: "/", label: "Prayer Request" },
   { href: "/", label: "Join Workforce" },
   { href: "/", label: "First Timers" },
-  { href: "/", label: "View all pages" },
+  // { href: "/", label: "View all pages" },
   
 ]
 
@@ -238,7 +238,7 @@ const FooterNav = () => {
                 </li>
               </ul>
               <p className="mt-8 text-xs text-[var(--color-muted)] sm:mt-0">
-                &copy; {new Date().getFullYear()} Compass Assembly. All rights
+                &copy; {new Date().getFullYear()} The Compass Assembly. All rights
             reserved.
               </p>
             </div>

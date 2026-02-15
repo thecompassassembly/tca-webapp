@@ -9,6 +9,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import HeaderNav from '@/components/HeaderNav';
 import FooterNav from '@/components/FooterNav';
 import { Users, Eye, Target, GiftIcon } from 'lucide-react';
+import OurServicesSection from '@/components/OurServicesSection';
 
 export default function Home() {
   return (
@@ -108,9 +109,16 @@ export default function Home() {
                 <div className="relative w-full h-72 md:h-96">
                   <Image src="/images/6051031874487914224.jpg" alt="Sermons" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute left-6 bottom-6 text-left text-white">
-                    <h4 className="text-2xl font-bold">Sermons</h4>
-                    <p className="mt-2 opacity-80">Access our latest teachings and messages.</p>
+                  <div className="absolute left-6 bottom-6 right-6 text-left text-white flex items-end justify-between">
+                    <div>
+                      <h4 className="text-2xl font-bold">Sermons</h4>
+                      <p className="mt-2 opacity-80">Access our latest teachings and messages.</p>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 flex-shrink-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -120,9 +128,16 @@ export default function Home() {
                 <div className="relative w-full h-72 md:h-96">
                   <Image src="/images/6051031874487914218.jpg" alt="Events" fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute left-6 bottom-6 text-left text-white">
-                    <h4 className="text-2xl font-bold">Events</h4>
-                    <p className="mt-2 opacity-80">Stay updated on upcoming activities and gatherings.</p>
+                  <div className="absolute left-6 bottom-6 right-6 text-left text-white flex items-end justify-between">
+                    <div>
+                      <h4 className="text-2xl font-bold">Events</h4>
+                      <p className="mt-2 opacity-80">Stay updated on upcoming activities and gatherings.</p>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 flex-shrink-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -158,13 +173,20 @@ export default function Home() {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   {/* Text on image */}
-                  <div className="absolute bottom-0 left-0 p-6 text-left">
-                    <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
-                      Rumumasi
-                    </h3>
-                    <p className="mt-2 text-sm md:text-base text-white/80">
-                      Experience worship and community at our Rumumasi expression.
-                    </p>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-left flex items-end justify-between">
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
+                        Rumumasi
+                      </h3>
+                      {/* <p className="mt-2 text-sm md:text-base text-white/80">
+                        Experience worship and community at our Rumumasi expression.
+                      </p> */}
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -181,13 +203,20 @@ export default function Home() {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   {/* Text on image */}
-                  <div className="absolute bottom-0 left-0 p-6 text-left">
-                    <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
-                      Rumuosi
-                    </h3>
-                    <p className="mt-2 text-sm md:text-base text-white/80">
-                      Connect and grow with us at our Rumuosi expression.
-                    </p>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-left flex items-end justify-between">
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
+                        Rumuosi
+                      </h3>
+                      {/* <p className="mt-2 text-sm md:text-base text-white/80">
+                        Connect and grow with us at our Rumuosi expression.
+                      </p> */}
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -204,13 +233,20 @@ export default function Home() {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   {/* Text on image */}
-                  <div className="absolute bottom-0 left-0 p-6 text-left">
-                    <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
-                      Oyigbo
-                    </h3>
-                    <p className="mt-2 text-sm md:text-base text-white/80">
-                      Be part of our thriving Oyigbo expression.
-                    </p>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-left flex items-end justify-between">
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-white">
+                        Oyigbo
+                      </h3>
+                      {/* <p className="mt-2 text-sm md:text-base text-white/80">
+                        Be part of our thriving Oyigbo expression.
+                      </p> */}
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -303,7 +339,7 @@ export default function Home() {
           <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.12)' }} />
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-6 md:px-12 w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80 text-white/90">
                   Support
@@ -331,31 +367,8 @@ export default function Home() {
               </div>
 
               {/* Illustration: hand dropping a coin */}
-              <div className="flex items-center justify-center">
-                <svg className="w-48 h-48 md:w-64 md:h-64" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <defs>
-                    <linearGradient id="goldGrad" x1="0" x2="1" y1="0" y2="1">
-                      <stop offset="0%" stopColor="#ffd54d" />
-                      <stop offset="100%" stopColor="#ffb300" />
-                    </linearGradient>
-                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                      <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#000" floodOpacity="0.25" />
-                    </filter>
-                  </defs>
-
-                  {/* coin */}
-                  <g filter="url(#shadow)">
-                    <circle className="animate-bounce" cx="84" cy="18" r="12" fill="url(#goldGrad)" stroke="#c78f00" strokeWidth="2" />
-                    <text x="84" y="22" textAnchor="middle" fontSize="10" fontWeight="700" fill="#8a5a00">₦</text>
-                  </g>
-
-                  {/* simple stylized hand */}
-                  <g transform="translate(6,34)">
-                    <path d="M12 38c8-2 18-6 30-12 6-3 16-2 22 3 5 5 4 14-4 20-8 6-24 8-38 6-8-1-12-6-12-17z" fill="#fff" opacity="0.95" />
-                    <path d="M22 36c6-3 14-6 22-9" stroke="#e6e6e6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <rect x="8" y="6" width="16" height="8" rx="4" fill="#fff" opacity="0.95" transform="rotate(-12 16 10)" />
-                  </g>
-                </svg>
+              <div className="flex items-center justify-end">
+                <img className='w-[70%]' src="/images/give.gif" alt="" />
               </div>
             </div>
           </div>
@@ -402,78 +415,7 @@ export default function Home() {
         </motion.section>
 
         {/* our services / cruise */}
-        <section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: "var(--color-background)" }}>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-left mb-12">
-              <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: "var(--color-primary)" }}>
-                Join Us
-              </p>
-              <h2 className="mt-4 text-3xl md:text-5xl font-black uppercase tracking-widest" style={{ color: "var(--color-foreground)" }}>
-                Our Services
-              </h2>
-              <p className="mt-4 max-w-2xl text-base md:text-lg leading-relaxed opacity-80">
-                Experience powerful worship and life-changing messages at any of our weekly services.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Sunday First Service */}
-              <div className="group relative overflow-hidden">
-                <div className="relative h-full min-h-[260px] p-8 bg-[var(--color-surface)] border border-[var(--color-border)]/40 shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_36px_rgba(0,0,0,0.15)]">
-                  {/* left accent bar */}
-                  <span className="absolute left-0 top-0 h-full w-1" style={{ backgroundColor: 'var(--color-primary)' }} />
-
-                  {/* label */}
-                  <div className="flex items-center gap-2">
-                    <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider rounded" style={{ backgroundColor: 'var(--color-primary)', color: '#000' }}>First Cruise</span>
-                    <span className="text-xs opacity-70">Sunday</span>
-                  </div>
-
-                  {/* time */}
-                  <p className="mt-4 text-4xl md:text-5xl font-black" style={{ color: 'var(--color-foreground)' }}>8:00 AM</p>
-                  <p className="mt-2 text-sm md:text-base opacity-80">Start your Sunday with worship and the Word.</p>
-
-                  {/* subtle background pattern */}
-                  <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, #fff 2px, transparent 2px)' }} />
-                </div>
-              </div>
-
-              {/* Sunday Second Service */}
-              <div className="group relative overflow-hidden">
-                <div className="relative h-full min-h-[260px] p-8 bg-[var(--color-surface)] border border-[var(--color-border)]/40 shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_36px_rgba(0,0,0,0.15)]">
-                  <span className="absolute left-0 top-0 h-full w-1" style={{ backgroundColor: 'var(--color-primary)' }} />
-
-                  <div className="flex items-center gap-2">
-                    <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider rounded" style={{ backgroundColor: 'var(--color-primary)', color: '#000' }}>Second Cruise</span>
-                    <span className="text-xs opacity-70">Sunday</span>
-                  </div>
-
-                  <p className="mt-4 text-4xl md:text-5xl font-black" style={{ color: 'var(--color-foreground)' }}>10:00 AM</p>
-                  <p className="mt-2 text-sm md:text-base opacity-80">Join our main Sunday gathering—celebration, community, and inspiration.</p>
-
-                  <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, #fff 2px, transparent 2px)' }} />
-                </div>
-              </div>
-
-              {/* Thursday Cruise */}
-              <div className="group relative overflow-hidden">
-                <div className="relative h-full min-h-[260px] p-8 bg-[var(--color-surface)] border border-[var(--color-border)]/40 shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_36px_rgba(0,0,0,0.15)]">
-                  <span className="absolute left-0 top-0 h-full w-1" style={{ backgroundColor: 'var(--color-primary)' }} />
-
-                  <div className="flex items-center gap-2">
-                    <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider rounded" style={{ backgroundColor: 'var(--color-primary)', color: '#000' }}>Midweek Cruise</span>
-                    <span className="text-xs opacity-70">Thursday</span>
-                  </div>
-
-                  <p className="mt-4 text-4xl md:text-5xl font-black" style={{ color: 'var(--color-foreground)' }}>6:00 PM</p>
-                  <p className="mt-2 text-sm md:text-base opacity-80">Midweek recharge—come cruise with us for worship, prayer, and teaching.</p>
-
-                  <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, #fff 2px, transparent 2px)' }} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <OurServicesSection />
 
         {/* Recent Events Section */}
         <section className="w-full py-20 px-6 md:px-12" style={{ backgroundColor: 'var(--color-background)' }}>
