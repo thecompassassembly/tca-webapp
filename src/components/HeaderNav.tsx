@@ -111,7 +111,7 @@ const HeaderNav = () => {
 
         {/* <span className="mx-3 flex lg:hidden text-nuetral-200 dark:text-neutral-700">|</span> */}
 
-        {/* <div className="hover:shadow-input relative hidden lg:flex cursor-pointer items-center justify-center rounded-xl p-2 space-x-2 ">
+        <div className="hover:shadow-input relative hidden lg:flex cursor-pointer items-center justify-center rounded-xl p-2 space-x-2 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -131,11 +131,12 @@ const HeaderNav = () => {
           </svg>
           <a
           className="hover:text-foreground/80 text-foreground/60 text-sm font-medium transition-colors"
-          href="/login"
+            href="https://paystack.shop/tcahq"
+            target="_blank"
         >
           Shop
         </a>    
-        </div> */}
+        </div>
         <span className="mx-3 hidden lg:flex text-nuetral-200 dark:text-neutral-700">|</span>
         {/* <a
           className="hover:text-foreground/80 text-foreground/60 mr-3 text-sm font-medium transition-colors hidden lg:flex "
