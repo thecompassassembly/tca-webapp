@@ -681,7 +681,7 @@ const AboutComp = () => {
           <div className="absolute inset-y-0 left-[62.5%] w-px bg-gradient-to-b from-transparent via-white/5 to-transparent" />
           <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
         </div>
-        <div className="relative z-10 w-full mx-auto px-6 md:px-8 justify-center text-center mb-20">
+        <div className="relative z-10 w-full mx-auto px-6 md:px-2 justify-center text-center mb-20">
           {/* Section header */}
           {/* <div className="w-full mb-20 lg:flex lg:flex-col text-start lg:items-center lg:text-center">
             <div className="inline-flex text-[11px] ring-1 ring-white/10 animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.05s_both] font-medium text-white/70 font-geist bg-white/5 rounded-full pt-1.5 pr-3 pb-1.5 pl-3 gap-x-2 gap-y-2 items-center justify-center">
