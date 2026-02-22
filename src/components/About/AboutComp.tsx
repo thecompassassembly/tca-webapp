@@ -5,12 +5,6 @@ import SubHero from "../SubHero";
 const AboutComp = () => {
   return (
     <div>
-      {/* <SubHero
-        imageSrc="/images/6051031874487914225.jpg"
-        title="Our Pastors"
-        pillText="Pastors"
-        subtitle="Meet the shepherds leading The Compass Assembly."
-      /> */}
       <div className="sec1 px-4 py-10 lg:py-16 mx-auto sm:py-4 sm:px-6 lg:px-8 dark:bg-BackgroundDark2 bg-BackgroundLight2">
         <section className="overflow-hidden pt-10 pb-12 lg:pt-[52px] lg:pb-[90px]">
           <div className="container mx-auto">
