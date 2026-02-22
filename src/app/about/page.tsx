@@ -12,7 +12,7 @@ export default function About() {
             }}
         >
             <HeaderNav />
-            <main className="px-8">
+            <main className="px-2">
                 <AboutComp />
             </main>
             <FooterNav />
