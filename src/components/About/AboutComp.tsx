@@ -746,7 +746,7 @@ const AboutComp = () => {
             <div className="relative rounded-3xl overflow-hidden ring-1 ring-white/15 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-md animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.28s_both]">
               <div className="absolute inset-0">
                 <Image
-                  src="https://i.pinimg.com/736x/a1/92/e3/a192e32ef42f51d0291676c86c4c010c.jpg"
+                  src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/459579f4-e2d0-4218-a12d-f974a4b89651_800w.jpg"
                   alt="Our Mission"
                   fill
                   className="opacity-70 object-cover"
