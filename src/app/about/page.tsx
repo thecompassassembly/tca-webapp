@@ -12,7 +12,7 @@ export default function About() {
             }}
         >
             <HeaderNav />
-            <main className="py-6 px-8">
+            <main className="px-8">
                 <AboutComp />
             </main>
             <FooterNav />
