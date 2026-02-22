@@ -16,7 +16,7 @@ export default function Events() {
             <HeaderNav />
 
 
-            <main className="py-16 px-6 md:px-12">
+            <main className="py-6 px-6 md:px-12">
                 <SubHero
                     imageSrc="/images/6051031874487914218.jpg"
                     title="Events"

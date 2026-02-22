@@ -1,5 +1,6 @@
 import HeaderNav from '@/components/HeaderNav';
 import FooterNav from '@/components/FooterNav';
+import AboutComp from '@/components/About/AboutComp';
 
 export default function About() {
     return (
@@ -11,8 +12,8 @@ export default function About() {
             }}
         >
             <HeaderNav />
-            <main className="py-16 px-8">
-
+            <main className="py-6 px-8">
+                <AboutComp />
             </main>
             <FooterNav />
         </div>

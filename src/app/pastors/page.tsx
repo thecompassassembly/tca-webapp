@@ -16,7 +16,7 @@ export default function Pastors() {
                 borderColor: "var(--color-secondary)",
             }}>
             <HeaderNav />
-            <main className="py-0">
+            <main className="py-6 px-8">
                 <SubHero
                     imageSrc="/images/6051031874487914225.jpg"
                     title="Our Pastors"
@@ -34,7 +34,7 @@ export default function Pastors() {
                         >
                             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-widest mb-4">Meet Our Pastors</h1>
                             <p className="text-lg md:text-xl text-foreground/80 max-w-3xl">
-                                Discover the visionary leaders guiding The Compass Assembly. Their passion for God's Word and unwavering commitment to community inspire us all to live with purpose and faith.
+                                Discover the visionary leaders guiding The Compass Assembly. Their passion for God&apos;s Word and unwavering commitment to community inspire us all to live with purpose and faith.
                             </p>
                         </motion.div>
                         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
@@ -95,7 +95,7 @@ export default function Pastors() {
                                     Pastor Favour Osiri serves alongside with grace and leadership, championing prayer, excellence, and community. She empowers believers to live intentionally and victoriously, drawing from her deep commitment to worship and discipleship.
                                 </p>
                                 <p className="mt-4 text-base md:text-lg text-foreground/85">
-                                    Her focus on family ministry and spiritual development helps create a nurturing space where faith is strengthened, relationships are built, and lives are transformed through God's grace.
+                                    Her focus on family ministry and spiritual development helps create a nurturing space where faith is strengthened, relationships are built, and lives are transformed through God&lsquo;s grace.
                                 </p>
                                 <div className="mt-6 flex flex-wrap gap-3">
                                     <Link href="/contact" className="px-4 py-2 rounded-lg text-sm font-semibold" style={{ backgroundColor: 'var(--color-primary)', color: '#fff' }}>Get in touch</Link>

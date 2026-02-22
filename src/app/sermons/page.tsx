@@ -102,7 +102,7 @@ export default function Sermons() {
                 borderColor: "var(--color-secondary)",
             }}>
             <HeaderNav />
-            <main className="py-0">
+            <main className="py-6 px-8">
                 <SubHero
                     imageSrc="/images/6051031874487914267.jpg"
                     title="Sermons"

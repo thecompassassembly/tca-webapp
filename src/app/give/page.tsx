@@ -10,7 +10,7 @@ export default function Give() {
                 borderColor: "var(--color-secondary)",
             }}>
             <HeaderNav />
-            <main className="py-16 px-8">
+            <main className="py-6 px-8">
 
             </main>
             <FooterNav />

@@ -25,7 +25,7 @@ export default function Contact() {
                             <div className="text-left mb-8">
                                 <p className="text-xs md:text-sm font-bold uppercase tracking-[0.35em] opacity-80" style={{ color: 'var(--color-primary)' }}>Get In Touch</p>
                                 <h2 className="mt-3 text-2xl md:text-4xl font-black uppercase tracking-widest" style={{ color: 'var(--color-foreground)' }}>Reach Out to The Compass Assembly</h2>
-                                <p className="mt-4 max-w-3xl text-base md:text-lg leading-relaxed opacity-85">Whether you need prayer, have questions, or want to partner with us, we're here for you.</p>
+                                <p className="mt-4 max-w-3xl text-base md:text-lg leading-relaxed opacity-85">Whether you need prayer, have questions, or want to partner with us, we&apos;re here for you.</p>
                             </div>
                         </motion.div>
 
