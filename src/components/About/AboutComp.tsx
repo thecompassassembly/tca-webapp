@@ -8,7 +8,7 @@ const AboutComp = () => {
       <div className="sec1 pb-16 lg:py-4 mx-auto sm:py-4 dark:bg-BackgroundDark2 bg-BackgroundLight2">
         <section className="overflow-hidden pt-10 pb-12 lg:pt-[52px] lg:pb-[90px]">
           <div className="container mx-auto">
-            <div className="-mx-4 flex flex-wrap items-center justify-between">
+            <div className="-mx-4 flex flex-col-reverse lg:flex-row row flex-wrap items-center justify-between">
               <div className="w-full lg:w-6/12">
                 <div className="-mx-3 flex items-center sm:-mx-4 ">
                   <div className="w-full xl:w-1/2">
@@ -669,7 +669,7 @@ const AboutComp = () => {
         </section>
       </div>
       <section
-        className="overflow-hidden bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/72c90007-7638-4902-8dda-5a6c20e92741_3840w.jpg)] bg-cover relative"
+        className="overflow-hidden bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/72c90007-7638-4902-8dda-5a6c20e92741_3840w.jpg)] bg-cover relative lg:px-10"
         data-element-locator="html > body:nth-of-type(1) > section:nth-of-type(3)"
         id="resources"
       >
