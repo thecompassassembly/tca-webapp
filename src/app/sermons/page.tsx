@@ -81,7 +81,7 @@ export default function Sermons() {
     <div className="min-h-screen bg-(--color-background) transition-colors duration-300">
       <main>
         {/* Cinematic Hero Section */}
-        <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[60vh] min-h-[600px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/46172b3c-6c63-4bd0-97b0-09a0ca82b055_3840w.webp"
@@ -105,9 +105,8 @@ export default function Sermons() {
                 Spiritual Nourishment
               </div>
               <h1 className="text-6xl md:text-3xl lg:text-5xl font-black uppercase tracking-tighter leading-[0.85] text-(--color-foreground)">
-                AN IMMERSIVE SPIRITUAL
-                <br />
-                <span className="text-(--color-primary)"> JOURNEY.</span>
+                AUDIO STREAM
+                <span className="text-(--color-primary)"> ING.</span>
               </h1>
               <p className="text-xl md:text-2xl text-(--color-foreground)/60 max-w-2xl mx-auto font-medium">
                 Dive into 50+ life-transforming messages from our pastors and
@@ -134,7 +133,7 @@ export default function Sermons() {
         </section>
 
         {/* Exhibition Marquee Highlight */}
-        <section className="py-12 border-y border-(--color-foreground)/5 overflow-hidden">
+        <section className="pb-12 border-y border-(--color-foreground)/5 overflow-hidden">
           <div className="flex w-max whitespace-nowrap">
             <motion.div
               animate={{ x: ["0%", "-50%"] }}
