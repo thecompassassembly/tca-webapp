@@ -5,7 +5,7 @@ import SubHero from "../SubHero";
 const AboutComp = () => {
   return (
     <div>
-      <div className="sec1 px-4 py-10 lg:py-16 mx-auto sm:py-4 sm:px-6 lg:px-8 dark:bg-BackgroundDark2 bg-BackgroundLight2">
+      <div className="sec1 px-4 pb-16 lg:py-4 mx-auto sm:py-4 sm:px-6 lg:px-8 dark:bg-BackgroundDark2 bg-BackgroundLight2">
         <section className="overflow-hidden pt-10 pb-12 lg:pt-[52px] lg:pb-[90px]">
           <div className="container mx-auto">
             <div className="-mx-4 flex flex-wrap items-center justify-between">
