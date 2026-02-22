@@ -8,6 +8,7 @@ import GiveSection from "@/components/GiveSection";
 import GetInvolvedSection from "@/components/GetInvolvedSection";
 import RecentSermonsSection from "@/components/RecentSermonsSection";
 import ExpressionsSection from "@/components/ExpressionsSection";
+import DirectionUi from "@/components/About/DirectionUi";
 
 export default function Home() {
   return (
@@ -117,6 +118,8 @@ export default function Home() {
 
         {/* Recent Events Section */}
         <RecentEventsSection />
+
+        <DirectionUi />
       </section>
     </main>
   );
