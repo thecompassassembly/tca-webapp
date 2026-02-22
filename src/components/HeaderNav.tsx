@@ -16,20 +16,15 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-
 const HeaderNav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null);
-
-  const toggleDropdown = (label: string) => {
-    setExpandedDropdown(expandedDropdown === label ? null : label);
-  };
 
   return (
     <header
-      className="mx-auto flex h-20 items-center p-2 md:px-4 lg:px-8 py-8 sticky top-0 z-50 backdrop-blur-md border-b border-[var(--color-border)] transition-colors duration-300"
+      className="w-full flex h-20 items-center p-2 md:px-4 lg:px-8 py-8 sticky top-0 z-100 backdrop-blur-md border-b border-white/10 transition-colors duration-300"
       style={{
-        backgroundColor: "color-mix(in srgb, var(--color-background) 80%, transparent)",
+        backgroundColor:
+          "color-mix(in srgb, var(--color-background) 80%, transparent)",
         color: "var(--color-foreground)",
       }}
     >
@@ -38,16 +33,19 @@ const HeaderNav = () => {
         href="/"
       >
         <div className="relative flex w-full items-center justify-center rounded-md bg-black text-sm text-white antialiased lg:ml-10">
-
           <div className="relative z-0 text-sm text-emerald-500">
-            <Image src="/image.png" height={50} width={50} alt="Logo" className="h-6 md:h-6 lg:h-8 w-auto" />
-
+            <Image
+              src="/image.png"
+              height={50}
+              width={50}
+              alt="Logo"
+              className="h-6 md:h-6 lg:h-8 w-auto"
+            />
           </div>
         </div>
       </Link>
 
       <nav className="mr-4 hidden lg:flex  items-center space-x-6 text-sm font-medium ">
-
         {navLinks.map((link) => (
           <Link
             key={link.href}
@@ -57,30 +55,9 @@ const HeaderNav = () => {
             {link.label}
           </Link>
         ))}
-
-
       </nav>
 
       <div className="flex flex-1 items-center justify-end gap-2 sm:gap-2 md:justify-end">
-
-        {/* <button className="relative flex w-fit items-center justify-start rounded-xl bg-white px-2 py-2 text-sm text-muted-foreground hover:shadow-input dark:bg-brand">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="h-4 w-4 text-neutral-500"
-          >
-            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-            <path d="M21 21l-6 -6"></path>
-          </svg>
-        </button> */}
-
         {/* Mobile controls */}
         <div className="flex lg:hidden items-center gap-2">
           <ThemeToggle />
@@ -95,12 +72,34 @@ const HeaderNav = () => {
             {/* Hamburger / Close icon */}
             <span className="sr-only">Open main menu</span>
             {mobileMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6"
+              >
                 <path d="M18 6L6 18"></path>
                 <path d="M6 6l12 12"></path>
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6"
+              >
                 <path d="M3 6h18"></path>
                 <path d="M3 12h18"></path>
                 <path d="M3 18h18"></path>
@@ -119,9 +118,9 @@ const HeaderNav = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="h-4 w-4 text-neutral-500 dark:text-neutral-500"
           >
             <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
@@ -130,21 +129,22 @@ const HeaderNav = () => {
             <path d="M6 5l14 1l-1 7h-13"></path>
           </svg>
           <a
-          className="hover:text-foreground/80 text-foreground/60 text-sm font-medium transition-colors"
+            className="hover:text-foreground/80 text-foreground/60 text-sm font-medium transition-colors"
             href="https://paystack.shop/tcahq"
             target="_blank"
-        >
-          Shop
-        </a>    
+          >
+            Shop
+          </a>
         </div>
-        <span className="mx-3 hidden lg:flex text-nuetral-200 dark:text-neutral-700">|</span>
+        <span className="mx-3 hidden lg:flex text-nuetral-200 dark:text-neutral-700">
+          |
+        </span>
         {/* <a
           className="hover:text-foreground/80 text-foreground/60 mr-3 text-sm font-medium transition-colors hidden lg:flex "
           href="/login"
         >
           Contact
         </a> */}
-
 
         <a
           style={{
@@ -158,14 +158,13 @@ const HeaderNav = () => {
           <span>Give</span>
         </a>
         <div className="hidden lg:flex ">
-
           <ThemeToggle />
         </div>
       </div>
       {/* Mobile menu panel */}
       <div
         id="mobile-menu"
-        className={`lg:hidden absolute left-0 right-0 top-full z-40 border-b border-[var(--color-border)] transition-all duration-200 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto h-screen' : 'opacity-0 pointer-events-none'}`}
+        className={`lg:hidden absolute left-0 right-0 top-full z-40 border-b border-[var(--color-border)] transition-all duration-200 ${mobileMenuOpen ? "opacity-100 pointer-events-auto h-screen" : "opacity-0 pointer-events-none"}`}
         style={{ backgroundColor: "var(--color-background)" }}
       >
         <nav className="px-4 py-4 space-y-3">
