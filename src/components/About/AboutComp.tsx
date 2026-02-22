@@ -5,13 +5,13 @@ import SubHero from "../SubHero";
 const AboutComp = () => {
   return (
     <div>
-      <div className="sec1 px-4 pb-16 lg:py-4 mx-auto sm:py-4 sm:px-6 lg:px-8 dark:bg-BackgroundDark2 bg-BackgroundLight2">
+      <div className="sec1 pb-16 lg:py-4 mx-auto sm:py-4 dark:bg-BackgroundDark2 bg-BackgroundLight2">
         <section className="overflow-hidden pt-10 pb-12 lg:pt-[52px] lg:pb-[90px]">
           <div className="container mx-auto">
             <div className="-mx-4 flex flex-wrap items-center justify-between">
-              <div className="w-full px-4 lg:w-6/12">
+              <div className="w-full lg:w-6/12">
                 <div className="-mx-3 flex items-center sm:-mx-4 ">
-                  <div className="w-full px-3 sm:px-4 xl:w-1/2">
+                  <div className="w-full xl:w-1/2">
                     <div className="py-3 sm:py-4">
                       <Image
                         src="https://i.pinimg.com/736x/77/24/18/7724180734893b30657c802345a2eff1.jpg"
@@ -657,7 +657,7 @@ const AboutComp = () => {
                   </p>
                   <a
                     href="/contact"
-                    className="inline-flex items-center justify-center rounded-lg bg-PrimaryDark py-4 px-10 text-center text-base font-normal text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
+                    className="inline-flex items-center justify-center rounded-lg bg-PrimaryDark py-4  text-center text-base font-normal text-white hover:bg-opacity-90"
                   >
                     Join Us
                   </a>
@@ -681,7 +681,7 @@ const AboutComp = () => {
           <div className="absolute inset-y-0 left-[62.5%] w-px bg-gradient-to-b from-transparent via-white/5 to-transparent" />
           <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
         </div>
-        <div className="relative z-10 w-full mx-auto px-6 md:px-2 justify-center text-center mb-20">
+        <div className="relative z-10 w-full mx-auto md:px-2 justify-center text-center mb-20">
           {/* Section header */}
           {/* <div className="w-full mb-20 lg:flex lg:flex-col text-start lg:items-center lg:text-center">
             <div className="inline-flex text-[11px] ring-1 ring-white/10 animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.05s_both] font-medium text-white/70 font-geist bg-white/5 rounded-full pt-1.5 pr-3 pb-1.5 pl-3 gap-x-2 gap-y-2 items-center justify-center">
