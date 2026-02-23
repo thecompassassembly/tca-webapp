@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, Link, Star } from 'lucide-react';
-import React from 'react'
+import { motion } from "framer-motion";
+import { ArrowRight, Link, Star } from "lucide-react";
+import React from "react";
 
 const DirectionUi = () => {
   return (
@@ -38,39 +38,56 @@ const DirectionUi = () => {
 
             <div className="relative z-10 max-w-3xl mx-auto space-y-8">
               <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-(--color-accent)/10 border border-(--color-accent)/20 text-(--color-accent) text-xs font-bold uppercase tracking-widest">
-                <Star className="w-4 h-4 fill-current" />
                 Next Level Living
               </div>
               <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-tight text-white">
-                READY TO FIND <br /> YOUR{" "}
-                <span className="text-(--color-primary)">DIRECTION</span>?
+                DIRECTION IS <br /> BETTER THAN{" "}
+                <span className="text-(--color-accent)">SPEED</span>?
               </h2>
               <p className="text-xl text-white/70 font-medium">
-                Whether you are seeking spiritual guidance, a sense of
-                belonging, or a place to make a difference, The Compass Assembly
-                is here to walk alongside you.
+                Need guidance, a sense of belonging, or a place to make a
+                difference, The Compass Assembly is here to walk alongside you.
               </p>
-              <div className="pt-8 flex flex-col sm:flex-row justify-center gap-6">
-                <Link
-                  href="/contact"
-                  className="px-12 py-5 bg-(--color-foreground) text-(--color-background) rounded-full font-black uppercase tracking-widest text-sm transition-all hover:scale-105 active:scale-95 shadow-2xl hover:bg-(--color-accent) hover:text-black"
+
+              <motion.div
+                className="flex justify-center w-full flex-col md:flex-row gap-4"
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5 }}
+              >
+                <motion.a
+                  href="/live"
+                  aria-label="Watch Live"
+                  className="inline-flex w-full md:w-auto md:flex-1 md:max-w-[240px] justify-center items-center gap-3 rounded-full px-6 py-3 bg-white text-(--color-primary) font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-(--color-accent)"
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4 }}
                 >
                   Visit A Location
-                </Link>
-                <Link
-                  href="/sermons"
-                  className="px-12 py-5 bg-(--color-background) border border-(--color-foreground)/10 text-(--color-foreground) rounded-full font-black uppercase tracking-widest text-sm transition-all hover:scale-105 active:scale-95 shadow-md flex items-center justify-center gap-2 hover:bg-(--color-primary) hover:text-white"
+                  <ArrowRight className="w-4 h-4" />
+                </motion.a>
+
+                <motion.a
+                  href="/give"
+                  aria-label="Give to The Compass Assembly"
+                  className="inline-flex w-full md:w-auto md:flex-1 md:max-w-[240px] justify-center items-center gap-3 rounded-full px-6 py-3 bg-(--color-accent) text-black font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-(--color-accent)"
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.08 }}
                 >
                   Watch Sermons
                   <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
+                </motion.a>
+              </motion.div>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
 
-export default DirectionUi
+export default DirectionUi;
