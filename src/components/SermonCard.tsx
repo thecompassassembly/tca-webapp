@@ -47,14 +47,14 @@ export default function SermonCard({
         />
         <div className="bg-linear-to-t from-black/70 via-black/30 to-transparent absolute inset-0"></div>
         <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
-          <div className="space-y-1">
+          {/* <div className="space-y-1">
             <p className="text-[11px] text-neutral-200 font-sans">
               Join thousands watching globally
             </p>
             <p className="text-xs text-neutral-400 max-w-xs font-sans">
               {sermon.date} · Shared for your spiritual growth.
             </p>
-          </div>
+          </div> */}
           {/* perfect circle more (...) */}
           <button
             className="flex outline-none focus-visible:outline-2 focus-visible:outline-(--color-accent)/80 flex-none text-neutral-100 bg-black/50 w-9 h-9 border-white/10 border rounded-full backdrop-blur items-center justify-center"

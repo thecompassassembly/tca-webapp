@@ -155,11 +155,11 @@ const AboutComp = () => {
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-(--color-accent)/5 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="text-center mb-24">
+          <div className="text-start mb-24">
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6 text-(--color-foreground)">
               THE <span className="text-(--color-accent)">FOUNDATION</span>.
             </h2>
-            <p className="text-xl text-(--color-foreground)/60 font-medium max-w-2xl mx-auto">
+            <p className="text-xl text-(--color-foreground)/60 font-medium max-w-2xl">
               Our vision and values are the compass that guides everything we do
               at The Compass Assembly.
             </p>

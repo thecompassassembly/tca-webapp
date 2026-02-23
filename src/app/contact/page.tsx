@@ -38,10 +38,10 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
               className="max-w-4xl"
             >
-              <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-(--color-primary)/10 border border-(--color-primary)/20 text-(--color-primary) text-xs font-bold uppercase tracking-widest mb-6">
+              {/* <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-(--color-primary)/10 border border-(--color-primary)/20 text-(--color-primary) text-xs font-bold uppercase tracking-widest mb-6">
                 <Star className="w-4 h-4 fill-current text-(--color-accent)" />
                 Get In Touch
-              </div>
+              </div> */}
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85] text-(--color-foreground)">
                 CONNECT <br />
                 <span className="text-(--color-accent)">WITH</span> US.
@@ -353,12 +353,12 @@ export default function Contact() {
 
         {/* Global Location CTA */}
         <section className="py-24 px-6 border-t border-(--color-foreground)/5">
-          <div className="container mx-auto max-w-7xl text-center space-y-10">
+          <div className="container mx-auto max-w-7xl space-y-10 ">
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-(--color-foreground)">
               FIND A LOCAL{" "}
               <span className="text-(--color-primary)">ASSEMBLY</span>.
             </h2>
-            <p className="text-xl text-(--color-foreground)/60 font-medium max-w-2xl mx-auto">
+            <p className="text-xl text-(--color-foreground)/60 font-medium max-w-2xl">
               We have several locations across the city. Discover the one
               closest to you and join our community this Sunday.
             </p>

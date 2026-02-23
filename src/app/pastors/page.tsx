@@ -22,18 +22,18 @@ export default function Pastors() {
             <div className="absolute inset-x-0 bottom-0 h-full bg-linear-to-t from-(--color-background) via-(--color-background)/60 to-transparent" />
           </div>
 
-          <div className="container mx-auto px-6 relative z-10 text-center">
+          <div className="container px-6 relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="max-w-4xl mx-auto space-y-6"
+              className="max-w-4xl space-y-6 text-start"
             >
               <h1 className="text-4xl md:text-5xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-(--color-foreground)">
                 THE <span className="text-(--color-accent)">SHEPHERDS</span>.
               </h1>
-              <p className="text-xl md:text-2xl text-(--color-foreground)/60 max-w-2xl mx-auto font-medium">
-                Meet the visionary leaders guided by faith and dedicated to
-                giving lives direction at The Compass Assembly.
+              <p className="text-xl md:text-2xl text-(--color-foreground)/60 max-w-2xl font-medium">
+                Meet the visionary leaders dedicated to giving lives direction
+                at The Compass Assembly.
               </p>
             </motion.div>
           </div>

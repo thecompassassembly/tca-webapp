@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { GiftIcon, Heart, ShieldCheck, Zap } from "lucide-react";
+import { ArrowUpRight, GiftIcon, Heart, ShieldCheck, Zap } from "lucide-react";
 
 const GiveSection = () => {
   return (
@@ -41,24 +41,6 @@ const GiveSection = () => {
             </div>
 
             {/* Feature Pills */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-center gap-4 p-4 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md transition-colors hover:bg-white/10 group">
-                <div className="w-10 h-10 rounded-2xl bg-(--color-primary)/10 flex items-center justify-center text-(--color-accent) group-hover:bg-(--color-primary) group-hover:text-white transition-all">
-                  <ShieldCheck className="w-5 h-5" />
-                </div>
-                <span className="text-sm font-bold text-neutral-300">
-                  Secure Giving
-                </span>
-              </div>
-              <div className="flex items-center gap-4 p-4 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md transition-colors hover:bg-white/10 group">
-                <div className="w-10 h-10 rounded-2xl bg-(--color-primary)/10 flex items-center justify-center text-(--color-accent) group-hover:bg-(--color-primary) group-hover:text-white transition-all">
-                  <Heart className="w-5 h-5" />
-                </div>
-                <span className="text-sm font-bold text-neutral-300">
-                  Kingdom Impact
-                </span>
-              </div>
-            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-6 mt-4">
@@ -80,42 +62,46 @@ const GiveSection = () => {
           </motion.div>
 
           {/* Graphic Side */}
+
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              ease: [0.21, 0.45, 0.32, 0.9],
-              delay: 0.2,
-            }}
+            transition={{ duration: 1, ease: [0.21, 0.45, 0.32, 0.9] }}
             className="relative"
           >
-            <div className="relative aspect-square md:aspect-4/5 overflow-hidden rounded-[4rem] group shadow-2xl">
+            <div className="relative aspect-4/5 overflow-hidden rounded-[3rem] shadow-2xl group border border-white/5">
               <Image
                 src="https://i.pinimg.com/736x/a8/c6/d6/a8c6d68283173700c80254d1e16018ab.jpg"
                 alt="Give to TCA"
                 fill
-                className="object-contain p-12 rounded-2xl transition-transform duration-1000 group-hover:scale-110"
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
-              {/* Optional: Add a more photographic background if gif is too simple */}
-              <div className="absolute inset-0 bg-linear-to-t from-(--color-primary)/10 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-t from-(--color-primary)/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+              {/* Image Info Badge */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -bottom-6 left-1 p-8 rounded-[2.5rem] bg-white/5 backdrop-blur-2xl border border-white/10 shadow-2xl max-w-xs"
+              >
+                <h4 className="text-lg font-black text-(--color-foreground) mb-2 uppercase tracking-tight leading-tight transition-colors">
+                  &ldquo;It is more blessed <br /> to give than <br /> to
+                  receive.&rdquo;
+                </h4>
+                <p className="text-xs font-bold text-(--color-accent) uppercase tracking-widest">
+                  Acts 20:35
+                </p>
+              </motion.div>
             </div>
 
-            {/* Info Badge */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 md:-left-12 p-8 rounded-[2.5rem] bg-white/5 backdrop-blur-2xl border border-white/10 shadow-2xl max-w-xs"
-            >
-              <h4 className="text-lg font-black text-(--color-foreground) mb-2 uppercase tracking-tight leading-tight transition-colors">
-                &ldquo;It is more blessed <br /> to give than <br /> to
-                receive.&rdquo;
-              </h4>
-              <p className="text-xs font-bold text-(--color-accent) uppercase tracking-widest">
-                Acts 20:35
-              </p>
-            </motion.div>
+            {/* Floating Decorative Elements */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-500/5 rounded-full blur-3xl" />
           </motion.div>
         </div>
       </div>

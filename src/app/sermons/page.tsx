@@ -93,27 +93,23 @@ export default function Sermons() {
             <div className="absolute inset-0 bg-linear-to-b from-transparent via-(--color-background)/80 to-(--color-background)" />
           </div>
 
-          <div className="container mx-auto px-6 relative z-10 text-center">
+          <div className="container px-6 relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto space-y-8"
+              className="max-w-4xl space-y-8 text-start"
             >
-              <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-(--color-accent)/10 border border-(--color-accent)/20 text-(--color-accent) text-xs font-bold uppercase tracking-widest">
-                <Star className="w-4 h-4 fill-current" />
-                Spiritual Nourishment
-              </div>
-              <h1 className="text-6xl md:text-3xl lg:text-5xl font-black uppercase tracking-tighter leading-[0.85] text-(--color-foreground)">
-                AUDIO STREAM
-                <span className="text-(--color-primary)"> ING.</span>
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85] text-(--color-foreground)">
+                AUDIO <br />
+                <span className="text-(--color-accent)">STREAMING</span>.
               </h1>
-              <p className="text-xl md:text-2xl text-(--color-foreground)/60 max-w-2xl mx-auto font-medium">
+              <p className="mt-8 text-xl md:text-2xl text-(--color-foreground)/60 max-w-2xl font-medium leading-relaxed">
                 Dive into 50+ life-transforming messages from our pastors and
                 visionary leaders.
               </p>
               <div className="pt-8 flex flex-col sm:flex-row justify-center gap-6">
-                <Link
+                {/* <Link
                   href="https://open.spotify.com"
                   target="_blank"
                   className="px-10 py-5 bg-(--color-primary) text-white rounded-full font-black uppercase tracking-widest text-sm transition-all hover:scale-105 active:scale-95 shadow-2xl hover:bg-(--color-accent) hover:text-black flex items-center justify-center gap-2"
@@ -126,7 +122,7 @@ export default function Sermons() {
                   className="px-10 py-5 bg-white border border-(--color-foreground)/10 text-neutral-900 rounded-full font-black uppercase tracking-widest text-sm transition-all hover:scale-105 active:scale-95 shadow-md flex items-center justify-center gap-2 hover:bg-(--color-foreground) hover:text-(--color-background)"
                 >
                   Explore Library
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           </div>
