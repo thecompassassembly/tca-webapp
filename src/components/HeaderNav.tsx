@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
@@ -18,6 +18,25 @@ const navLinks = [
 
 const HeaderNav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      const saved = localStorage.getItem("theme");
+      const dark = saved
+        ? saved === "dark"
+        : !document.documentElement.classList.contains("light");
+      setIsDark(dark);
+    };
+    checkTheme();
+    // Watch for class changes on <html> so logo updates when ThemeToggle fires
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header
@@ -32,10 +51,10 @@ const HeaderNav = () => {
         className="focus-visible:ring-ring hover:text-accent-foreground inline-flex h-9 items-center justify-center rounded-md px-0 py-2 text-base font-medium transition-colors hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 w-auto lg:mr-10"
         href="/"
       >
-        <div className="relative flex w-full items-center justify-center rounded-md bg-black text-sm text-white antialiased lg:ml-10">
+        <div className="relative flex w-full items-center justify-center rounded-md text-sm antialiased lg:ml-10">
           <div className="relative z-0 text-sm text-emerald-500">
             <Image
-              src="/image.png"
+              src={isDark ? "/image.png" : "/logolight.png"}
               height={50}
               width={50}
               alt="Logo"
@@ -151,7 +170,7 @@ const HeaderNav = () => {
             backgroundColor: "var(--color-primary)",
             // color: "var(--color-accent)",
           }}
-          className="no-underline hidden lg:flex space-x-2 group cursor-pointer transition duration-200 p-px font-semibold px-4 py-2 relative z-20 dark:text-white text-white h-10 items-center justify-center rounded-lg text-center text-sm w-fit flex-row items-center"
+          className="no-underline hidden lg:flex space-x-2 group cursor-pointer transition duration-200 p-px font-semibold px-4 py-2 relative z-20 dark:text-white text-white h-10 items-center justify-center rounded-lg text-center text-sm w-fit flex-row"
           href="/pricing"
         >
           <GiftIcon className="h-4 w-4" />
@@ -164,7 +183,7 @@ const HeaderNav = () => {
       {/* Mobile menu panel */}
       <div
         id="mobile-menu"
-        className={`lg:hidden absolute left-0 right-0 top-full z-40 border-b border-[var(--color-border)] transition-all duration-200 ${mobileMenuOpen ? "opacity-100 pointer-events-auto h-screen" : "opacity-0 pointer-events-none"}`}
+        className={`lg:hidden absolute left-0 right-0 top-full z-40 border-b border-(--color-border) transition-all duration-200 ${mobileMenuOpen ? "opacity-100 pointer-events-auto h-screen" : "opacity-0 pointer-events-none"}`}
         style={{ backgroundColor: "var(--color-background)" }}
       >
         <nav className="px-4 py-4 space-y-3">
