@@ -32,8 +32,8 @@ const fadeUp = {
 
 function DetailRow({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex items-center justify-between py-3 border-b border-white/10 last:border-0">
-      <span className="text-sm font-medium text-(--color-foreground)/50 uppercase tracking-wider">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-3 border-b border-white/10 last:border-0 gap-0.5">
+      <span className="text-xs sm:text-sm font-medium text-(--color-foreground)/50 uppercase tracking-wider">
         {label}
       </span>
       <span className="text-sm font-bold text-(--color-foreground) select-all">
@@ -51,7 +51,7 @@ export default function Give() {
   return (
     <div className="min-h-screen bg-(--color-background) text-(--color-foreground) transition-colors duration-300">
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="relative h-[55vh] md:h-[65vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[50vh] md:h-[75vh] flex items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://i.pinimg.com/736x/a8/c6/d6/a8c6d68283173700c80254d1e16018ab.jpg"
@@ -63,20 +63,20 @@ export default function Give() {
           <div className="absolute inset-0 bg-linear-to-b from-transparent via-(--color-background)/70 to-(--color-background)" />
         </div>
 
-        <div className="container mx-auto px-6 md:px-12 relative z-10 pb-12 md:pb-16">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10 pb-8 md:py-16">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85]">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85]">
               YOUR&nbsp;
               <span className="text-(--color-accent)">SEED</span>
               <br />
               CHANGES LIVES.
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-(--color-foreground)/60 max-w-2xl font-medium leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-(--color-foreground)/60 max-w-2xl font-medium leading-relaxed">
               Every gift — no matter the size — fuels our mission to build
               communities, reach the lost, and advance the Kingdom. Thank you for
               your generosity.
@@ -86,7 +86,7 @@ export default function Give() {
       </section>
 
       {/* ── Giving methods ───────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-12 sm:py-20 md:py-28 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
           <motion.p
             initial={{ opacity: 0 }}
@@ -98,7 +98,7 @@ export default function Give() {
             Ways to Give
           </motion.p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 mt-8 sm:mt-10">
             {/* ── Card 1 · Bank Transfer ──────────────────────────── */}
             <motion.div
               custom={0}
@@ -106,12 +106,12 @@ export default function Give() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="rounded-[2rem] border border-(--color-primary)/10 bg-white/[0.03] backdrop-blur-lg p-8 flex flex-col gap-6 hover:border-(--color-primary)/40 transition-colors"
+              className="rounded-2xl sm:rounded-[2rem] border border-(--color-primary)/10 bg-white/[0.03] backdrop-blur-lg p-5 sm:p-8 flex flex-col gap-4 sm:gap-6 hover:border-(--color-primary)/40 transition-colors"
             >
-              <div className="w-14 h-14 rounded-2xl bg-(--color-primary)/15 flex items-center justify-center">
-                <Landmark className="w-7 h-7 text-(--color-primary)" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-(--color-primary)/15 flex items-center justify-center">
+                <Landmark className="w-6 h-6 sm:w-7 sm:h-7 text-(--color-primary)" />
               </div>
-              <h3 className="text-2xl font-black uppercase tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight">
                 Bank Transfer
               </h3>
               <div className="flex-1">
@@ -134,12 +134,12 @@ export default function Give() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="rounded-[2rem] border border-(--color-primary)/10 bg-white/[0.03] backdrop-blur-lg p-8 flex flex-col gap-6 hover:border-(--color-primary)/40 transition-colors"
+              className="rounded-2xl sm:rounded-[2rem] border border-(--color-primary)/10 bg-white/[0.03] backdrop-blur-lg p-5 sm:p-8 flex flex-col gap-4 sm:gap-6 hover:border-(--color-primary)/40 transition-colors"
             >
-              <div className="w-14 h-14 rounded-2xl bg-(--color-accent)/15 flex items-center justify-center">
-                <Smartphone className="w-7 h-7 text-(--color-accent)" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-(--color-accent)/15 flex items-center justify-center">
+                <Smartphone className="w-6 h-6 sm:w-7 sm:h-7 text-(--color-accent)" />
               </div>
-              <h3 className="text-2xl font-black uppercase tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight">
                 Mobile Transfer
               </h3>
               <div className="flex-1">
@@ -160,12 +160,12 @@ export default function Give() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="rounded-[2rem] border border-(--color-primary)/10 bg-white/[0.03] backdrop-blur-lg p-8 flex flex-col gap-6 hover:border-(--color-primary)/40 transition-colors"
+              className="rounded-2xl sm:rounded-[2rem] border border-(--color-primary)/10 bg-white/[0.03] backdrop-blur-lg p-5 sm:p-8 flex flex-col gap-4 sm:gap-6 hover:border-(--color-primary)/40 transition-colors"
             >
-              <div className="w-14 h-14 rounded-2xl bg-(--color-primary)/15 flex items-center justify-center">
-                <Globe className="w-7 h-7 text-(--color-primary)" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-(--color-primary)/15 flex items-center justify-center">
+                <Globe className="w-6 h-6 sm:w-7 sm:h-7 text-(--color-primary)" />
               </div>
-              <h3 className="text-2xl font-black uppercase tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight">
                 Online Giving
               </h3>
               <p className="flex-1 text-sm text-(--color-foreground)/60 leading-relaxed">
@@ -174,7 +174,7 @@ export default function Give() {
               </p>
               <a
                 href="#"
-                className="inline-flex items-center justify-center gap-3 w-full px-8 py-4 rounded-full bg-white text-neutral-950 font-black uppercase tracking-widest text-sm transition-all hover:scale-[1.03] active:scale-95 shadow-lg hover:bg-(--color-primary) hover:text-white"
+                className="inline-flex items-center justify-center gap-2 sm:gap-3 w-full px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white text-neutral-950 font-black uppercase tracking-wider sm:tracking-widest text-xs sm:text-sm transition-all hover:scale-[1.03] active:scale-95 shadow-lg hover:bg-(--color-primary) hover:text-white"
               >
                 <Heart className="w-5 h-5" />
                 Donate Now
@@ -188,12 +188,12 @@ export default function Give() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="rounded-[2rem] border border-(--color-accent)/20 bg-white/[0.03] backdrop-blur-lg p-8 flex flex-col col-span-2 gap-6 hover:border-(--color-accent)/40 transition-colors"
+              className="rounded-2xl sm:rounded-[2rem] border border-(--color-accent)/20 bg-white/[0.03] backdrop-blur-lg p-5 sm:p-8 flex flex-col col-span-1 md:col-span-2 lg:col-span-2 gap-4 sm:gap-6 hover:border-(--color-accent)/40 transition-colors"
             >
-              <div className="w-14 h-14 rounded-2xl bg-(--color-accent)/15 flex items-center justify-center">
-                <Zap className="w-7 h-7 text-(--color-accent)" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-(--color-accent)/15 flex items-center justify-center">
+                <Zap className="w-6 h-6 sm:w-7 sm:h-7 text-(--color-accent)" />
               </div>
-              <h3 className="text-2xl font-black uppercase tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight">
                 Pinnacle Seed
               </h3>
               <div className="flex-1">
@@ -212,7 +212,7 @@ export default function Give() {
       </section>
 
       {/* ── Scripture Banner ─────────────────────────────────────── */}
-      <section className="py-20 px-6">
+      <section className="py-12 sm:py-20 px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -221,7 +221,7 @@ export default function Give() {
           className="container mx-auto max-w-5xl text-center"
         >
           <BookOpen className="w-10 h-10 mx-auto mb-6 text-(--color-accent)" />
-          <blockquote className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight">
+          <blockquote className="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight">
             &ldquo;It is more blessed to give <br className="hidden md:block" />
             than to receive.&rdquo;
           </blockquote>
@@ -232,7 +232,7 @@ export default function Give() {
       </section>
 
       {/* ── Trust Strip ──────────────────────────────────────────── */}
-      <section className="pb-24 px-6">
+      <section className="pb-16 sm:pb-24 px-4 sm:px-6">
         <div className="container mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           {[
             {
@@ -273,13 +273,13 @@ export default function Give() {
       </section>
 
       {/* ── Contact CTA ──────────────────────────────────────────── */}
-      <section className="pb-28 px-6">
+      <section className="pb-16 sm:pb-28 px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="container mx-auto max-w-3xl text-center rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-lg p-10 md:p-16"
+          className="container mx-auto max-w-3xl text-center rounded-2xl sm:rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-lg p-6 sm:p-10 md:p-16"
         >
           <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-4">
             Need Help With Giving?
@@ -290,7 +290,7 @@ export default function Give() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-(--color-primary) text-white font-black uppercase tracking-widest text-sm transition-all hover:scale-[1.03] active:scale-95 shadow-xl"
+            className="inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-10 py-3 sm:py-4 rounded-full bg-(--color-primary) text-white font-black uppercase tracking-wider sm:tracking-widest text-xs sm:text-sm transition-all hover:scale-[1.03] active:scale-95 shadow-xl"
           >
             Contact Us
           </a>
