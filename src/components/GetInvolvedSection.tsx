@@ -87,16 +87,18 @@ const GetInvolvedSection = () => {
                   Join our live services and events to worship with us online.
                 </p>
                 <div className="mt-6">
-                  <button className="inline-flex items-center gap-3 rounded-full px-5 py-3 bg-white text-[var(--color-primary)] font-bold shadow">
-                    Watch Now
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      className="w-4 h-4"
-                    >
-                      <path d="M5 3v18l15-9-15-9z" fill="currentColor" />
-                    </svg>
-                  </button>
+                  <a href="https://www.youtube.com/@Thecompasshq" target="_blank" rel="noopener noreferrer">
+                    <button className="inline-flex items-center gap-3 rounded-full px-5 py-3 bg-white text-[var(--color-primary)] font-bold shadow">
+                      Watch Now
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        className="w-4 h-4"
+                      >
+                        <path d="M5 3v18l15-9-15-9z" fill="currentColor" />
+                      </svg>
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

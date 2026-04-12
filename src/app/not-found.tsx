@@ -1,7 +1,5 @@
 'use client'
 
-import HeaderNav from '@/components/HeaderNav';
-import FooterNav from '@/components/FooterNav';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Home, ArrowLeft } from 'lucide-react';
@@ -13,7 +11,6 @@ export default function NotFound() {
                 backgroundColor: "var(--color-background)",
                 color: "var(--color-foreground)",
             }}>
-            <HeaderNav />
             <main className="flex items-center justify-center min-h-[80vh] px-6 md:px-8">
                 <motion.div
                     className="text-center max-w-2xl mx-auto"
@@ -75,7 +72,6 @@ export default function NotFound() {
                     </div>
                 </motion.div>
             </main>
-            <FooterNav />
         </div>
     );
 }

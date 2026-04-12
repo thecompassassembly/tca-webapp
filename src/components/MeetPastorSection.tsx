@@ -123,7 +123,7 @@ const MeetPastorSection = () => {
                   <a
                     key={idx}
                     href="#"
-                    className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-(--color-accent) hover:text-black hover:border-(--color-accent) transition-all duration-500 hover:-translate-y-2 shadow-xl"
+                    className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-black hover:bg-(--color-accent) hover:text-black hover:border-(--color-accent) transition-all duration-500 hover:-translate-y-2 shadow-xl"
                   >
                     <Icon className="w-6 h-6" />
                   </a>

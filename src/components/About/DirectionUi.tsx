@@ -57,8 +57,8 @@ const DirectionUi = () => {
                 transition={{ duration: 0.5 }}
               >
                 <motion.a
-                  href="/live"
-                  aria-label="Watch Live"
+                  href="/locations"
+                  aria-label="Visit Locations"
                   className="inline-flex w-full md:w-auto md:flex-1 md:max-w-[240px] justify-center items-center gap-3 rounded-full px-6 py-3 bg-white text-(--color-primary) font-bold shadow-md transition-transform duration-150 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-(--color-accent)"
                   initial={{ opacity: 0, y: 8 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const DirectionUi = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.08 }}
                 >
-                  Watch Sermons
+                  Give
                   <ArrowRight className="w-4 h-4" />
                 </motion.a>
               </motion.div>

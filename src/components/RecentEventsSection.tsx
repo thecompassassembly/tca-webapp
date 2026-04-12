@@ -148,7 +148,7 @@ const RecentEventsSection = () => {
 
                   {/* Content Overlay */}
                   <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">
-                    <div className="absolute top-8 left-8">
+                    <div className="absolute bottom-10 left-8">
                       <div className="px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-2xl border border-white/10 text-[10px] font-black uppercase tracking-widest text-white shadow-2xl flex items-center gap-3">
                         <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
                         {event.category}

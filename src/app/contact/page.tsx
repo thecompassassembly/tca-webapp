@@ -246,7 +246,7 @@ export default function Contact() {
                       Our Location
                     </h3>
                     <p className="opacity-75">
-                      Market junction, Aba road port harcourt
+                      R2QG+8MW, Rumuomasi, Port Harcourt 500102, Rivers State, Nigeria
                     </p>
                   </div>
                 </div>
@@ -337,7 +337,7 @@ export default function Contact() {
                     >
                       Service Hours
                     </h3>
-                    <p className="opacity-75">Sundays: 8:00 AM & 10:00 PM</p>
+                    <p className="opacity-75">Sundays: 8:00 AM & 10:00 AM</p>
                     <p className="opacity-75">Thursdays: 6:00 PM - 8:00 PM</p>
                   </div>
                 </div>

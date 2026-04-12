@@ -18,7 +18,7 @@ const expressions = [
   },
   {
     id: 2,
-    name: "TCA South Expression",
+    name: "TCA Rumuosi Expression",
     role: "Community Growth & Local Outreach",
     description:
       "Bringing the light of the Gospel to the southern region through community-focused ministry.",
@@ -38,7 +38,7 @@ const expressions = [
   },
   {
     id: 4,
-    name: "TCA Next Gen",
+    name: "TCA Oyigbo Expression",
     role: "Generation Z & Millennial Hub",
     description:
       "Empowering the next generation to lead with faith, creativity, and purpose.",
